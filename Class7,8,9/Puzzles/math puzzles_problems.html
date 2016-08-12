@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://www.podval.org/~sds/puzzles.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="puzzles/problems">
+<meta name="keywords" content="mathematics, problems">
+<link rel="stylesheet" href="./math puzzles_problems_files/sds.css" type="text/css">
+<script type="text/javascript" src="./math puzzles_problems_files/timedate.js">
+ //document.write()
+</script>
+<link rel="start" href="http://www.podval.org/~sds/index.html">
+<title>math puzzles/problems</title>
+</head>
+
+<body>
+<h1>Problems And Puzzles</h1>
+
+<p>Some of these are <strong>very</strong> simple, some are not
+<em><strong>so</strong></em> simple, some are just jokes.</p>
+
+<hr>
+
+<ol>
+ <li id="awasser"> (from Adam Wasserman)
+  <p>What is the degree of the highest exponent of K when you
+   complete the operation:</p>
+  <blockquote><p><code> (K-A)(K-B)(K-C)...(K-Y)(K-Z) </code></p></blockquote>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#awasser">solution</a>]<br><br></p></li>
+
+ <li id="sharapov"> (from Ilya Sharapov)
+  <p>Prove that for any integer <code>n</code> the number
+  <code>[(2+sqrt(3))<sup>n</sup>]</code> is odd.
+  (<code>[x]</code> is the integer part of <code>x</code>)</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#sharapov">solution</a>]<br><br></p></li>
+
+ <li id="escalator">
+  2 kids, John and Jim, are running on an escalator (a moving
+  stairway).  John is running three times as fast as Jim, and by the
+  time they are off the escalator, John has stepped on 75 stairs while
+  Jim has stepped on 50 stairs.  How many stairs does the escalator
+  have?  How is its speed related to the speed of the boys?  Were they
+  running with or against the escalator?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#escalator">solution</a>]<br><br></p></li>
+
+ <li id="sequences">
+  Consider a sequence of <code>n+1</code> integers
+  <code>a<sub>0</sub>, a<sub>1</sub>, ..., a<sub>n</sub></code> such
+  that <code>a<sub>k</sub>=#{j|a<sub>j</sub>=k}</code>.  I.e.,
+  <code>a<sub>0</sub></code> is the number of zeros in the sequence,
+  while <code>a<sub>20</sub></code> in the number of 20-ies in it.
+  E.g., the sequence of length 4 <code>[1;2;1;0]</code> satisfies the
+  condition: these is only one zero there, so
+  <code>a<sub>0</sub>=1</code>, there are two ones, so
+  <code>a<sub>1</sub>=2</code>, there is one two, so
+  <code>a<sub>2</sub>=1</code>, and there are no threes, so
+  <code>a<sub>3</sub>=0</code>.  Describe all such sequences.
+  <p>[<a href="http://www.podval.org/~sds/notes.html#sequences">solution</a>]<br><br></p></li>
+
+ <li id="haible"> (from <a href="http://www.haible.de/bruno/">Bruno Haible</a>)
+  <p>Prove that for any positive integer n, the finite product
+  <br><code>prod (1 &lt;= k &lt;= floor(n/2), 3 + 2 cos (2 k pi / n))</code>
+  <br>is a rational number.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#haible">solution</a>]<br><br></p></li>
+
+ <li id="measure">
+  Is it possible to split the unit segment <code>I=[0;1]</code> into
+  two "uniformly same-size" subsets <code>A</code> and <code>I-A</code>,
+  i.e., so that any subsegment <code>J=[a;b]</code> of <code>I</code>
+  would intersect <code>A</code> and <code>I-A</code> on sets of the
+  same Lebesgue measure?  (If you don't know what "Lebesgue measure" is,
+  don't worry - it's just a generalization of the ordinary length to
+  "bad" sets).
+  <p>[<a href="http://www.podval.org/~sds/notes.html#measure">solution</a>]<br><br></p></li>
+
+ <li id="bike">
+  2 pedestrians have one bike.  They travel as follows: the first one
+  rides the bike for some time, then drops it and continues walking in
+  the same direction, while the second follows him by foot.  Eventually,
+  the second one finds the bike and rides it until he overtakes the
+  first one.  Then he gives the bike to the first one etc.  Assuming
+  that they walk with the same speed and bike faster than they walk,
+  what is the speed of their travel?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#bike">solution</a>]<br><br></p></li>
+
+ <li id="minkov">
+  (from <a href="mailto:minkov@cs.technion.ac.il">Eli Minkov</a>)
+  <p>Prove that for any quadrilateral with sides <code>a</code>,
+  <code>b</code>, <code>c</code> and <code>d</code> and area
+  <code>S</code>, the following inequality holds: <code>ac+bd &gt;=
+  S</code> (when does the inequality turns into equality?)</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#minkov">solution</a>]<br><br></p></li>
+
+ <li id="ellipse-diagonal">
+  Prove that all rectangles circumscribed around a given ellipse
+  have the same diagonal.  Generalize.
+  <p>[<a href="http://www.podval.org/~sds/notes.html#ellipse-diagonal">solution</a>]<br><br></p></li>
+
+ <li id="cars">
+  N cars, each having a different speed, are going along a 1-lane
+  road, so no passing is possible.  Eventually, the cars will accumulate
+  in packets, with the "fast" cars tailgating the "slow" ones.  E.g., if
+  the initial order was 1,5,2,4,3 (1 being the slowest, 5 being the
+  fastest), we will end up with 3 packets: {1}, {5,2} and {4,3}.  Find
+  the average number of packets as a function of N.
+  <p>[<a href="http://www.podval.org/~sds/notes.html#cars">solution</a>]<br><br></p></li>
+
+ <li id="code-lock">
+  A lady is locked in a dungeon, while the vile monster went to get
+  firewood.  When the monster is back in 15 min, he will cook and eat
+  the lady.  The lock is an advanced coded one: it has 4 oriented
+  (top/bottom) spikes in a drum, arranged in a square and invisible.
+  The lady can put her two hands into the drum, feel 2 of the spikes
+  (adjacent or diagonal), determine their orientation and change it as
+  she wishes.  If all 4 spikes end up the same direction (up or down),
+  the lock opens and she can escape.  If not, the drum rotates quickly
+  for 1 min (so that she does not know which spikes she touched), then
+  stops and she can try again.  Can she escape?  How?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#code-lock">solution</a>]<br><br></p></li>
+
+ <li id="parabola">
+  A parabola <code>y=x<sup>2</sup></code> was drawn, then the
+  coordinate axes were erased.  Restore the axes with a compass and a
+  ruler.
+
+  <p>This problem was given during the Moscow State University Faculty
+  of Mechanics and Mathematics entrance oral mathematics examination to
+  a Jew, a graduate of <a href="http://www.sch57.msk.ru/">my high
+  school</a>, in the Summer 1988 (3 years into "perestrojka").
+  The guy could not do the problem in the 15-20 minutes allowed, so his
+  two examiners failed him.  He went home and consulted a friend of his
+  (a specialist on the matters related to the admission process), and
+  was advised that the problem is unsolvable.  So the poor chap went
+  back to appeal his failing grade (one could appeal on the day of the
+  exam only).
+  He found his two tormenters and told them that the problem had no
+  solution.  They said it did.  He asked them to provide it.
+  They said "this is an appeal hearing, not a consultation"
+   (the usual answer to such a question).
+  He said: "do you know the solution?"
+  They said: "yes, of course."
+  He said: "which one of you does?"
+  They looked at each other and changed his grade from failing to
+  passing, so he was admitted to the University.</p>
+  <p><a href="http://www.tanyakhovanova.com/coffins.html">More problems
+  with a similar history</a>.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#parabola">solution</a>]<br><br></p></li>
+
+ <li id="circle-tan">
+  Draw the tangent to a circle at a given point using only a ruler
+  (no compass).
+  <p>[<a href="http://www.podval.org/~sds/notes.html#circle-tan">solution</a>]<br><br></p></li>
+
+ <li id="computers">
+  You are at a computer store which sells 3 computers: the Japanese one,
+  which always answers any Yes-or-No question correctly, the Chinese
+  one, which always answers any Yes-or-No question IN-correctly, and a
+  Russian one, which sometimes tells the truth and sometimes lies - you
+  never know.  You can ask one Yes-or-No question to any one of the
+  three computers, after which you must buy any one of the three.  You
+  don't want the Russian computer, but each of the other two is okay.
+  What can you do?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#computers">solution</a>]<br><br></p></li>
+
+ <li id="coins">
+  You have 12 coins, one of which is counterfeit (lighter or heavier
+  than the others - you do not know that), and a scales which lets you
+  compare the weights of any two sets of coins.  You may use the scales
+  3 times.  Determine which coin is counterfeit and whether it is
+  heavier or lighter than the true ones.
+  <p>[<a href="http://www.podval.org/~sds/notes.html#coins">solution</a>]<br><br></p></li>
+
+ <li id="sphere">
+  Given a plane in the 3D space and 2 points on the different sides of
+  the plane, find the spere passing through the two points which
+  minimizes the area of its intersection with the plane.
+  <p>[<a href="http://www.podval.org/~sds/notes.html#sphere">solution</a>]<br><br></p></li>
+
+ <li id="bridge">
+  A family of 4 is trying to cross a bridge at night.  One needs a
+  flashlight to cross the bridge, and only two persons can cross the
+  bridge at the same time, moving at the speed of the slower of the
+  two.  Father crosses the bridge in 1 minute, Mother in 2 minutes,
+  Child in 5 minutes and Granny in 10.  What is the fastest way for them
+  to cross the bridge?
+
+  <p>The obvious solution is for <code>F</code> to always carry the
+  flashlight back, i.e., <code>FM+F+FC+F+FG</code> which means 19
+  minutes (the notation means: first, <code>F</code> and <code>M</code>
+  cross, then <code>F</code> carries the flashlight back, third,
+  <code>F</code> and <code>C</code> cross together, fourth,
+  <code>F</code> carries the flashlight back again, finally,
+  <code>F</code> and <code>G</code> cross).  Can you do faster?</p>
+
+  <p>It is alleged that this is the standard problem given at an
+  interview at <a href="http://www.podval.org/~sds/lose.html">Microsoft</a>.</p>
+
+  <p>[<a href="http://www.podval.org/~sds/notes.html#bridge">solution</a>]<br><br></p></li>
+
+ <li id="fuse">
+  You have two 4-minute
+  <a href="http://en.wikipedia.org/wiki/Fuse_%28explosives%29">fuses</a>.
+  They are not homogeneous, i.e., one half will not burn for 2 minutes.
+  Can you measure a 3 minute interval with these 2 cords?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#fuse">solution</a>]<br><br></p></li>
+
+ <li id="rope">
+  You are on top of a 40 meter high building, you have a 30 meter long
+  rope, and you may not jump or fall. There are no windows or doors, the
+  only way down is along the flat wall with a single solid ring at
+  midpoint (20 meters from both roof and ground), to which you can
+  attach your rope.  You can cut and tie the rope as much as you like,
+  disregard the length of the rope you spend on knots.
+  Can you get to the ground?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#rope">solution</a>]<br><br></p></li>
+
+ <li id="mail">
+  You have to send a diamond over the mail.  The post office sells boxes
+  of all sizes equipped with multiple latches, as well as locks and keys
+  (you can duplicate keys, and you can put more then one lock on the same
+  box).  The boxes cannot be broken, so the recepient must have a key to
+  open the box.  A key cannot be sent outside of a box, and an unlocked
+  box cannot be mailed.  How can you send the valuable diamond?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#mail">solution</a>]<br><br></p></li>
+
+ <li id="fridge">
+  The following short quiz consists of 4 questions and tells whether
+  you are qualified to be a "manager".
+  <ol>
+   <li>How do you put a giraffe into a refrigerator?</li>
+   <li>How do you put an elephant into a refrigerator?</li>
+   <li>The Lion King is hosting an animal conference, all the
+       animals attend except one.  Which animal does not attend?</li>
+   <li>There is a river you must cross, but it is inhabited by
+       crocodiles, and there is no bridge.  How do you manage it?</li>
+  </ol>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#fridge">solution</a>]<br><br></p></li>
+
+ <li id="slugs">
+  4 slugs are moving along 4 straight lines at constant speeds.
+  None of the lines are parallel and no 3 of them pass through the same
+  point (so called <cite>general configuration</cite>).
+  Slug <code>A</code> meets <code>B</code> where their respective lines
+  intersect.  The same holds for <code>A</code> and <code>C</code>,
+  <code>A</code> and <code>D</code>, <code>B</code> and <code>C</code>,
+  <code>B</code> and <code>D</code>.  Prove that <code>C</code> and
+  <code>D</code> also meet where their lines intersect.
+  <p>[<a href="http://www.podval.org/~sds/notes.html#slugs">solution</a>]<br><br></p></li>
+
+ <li id="headtail">
+  (from <a href="mailto:tanyakh@yahoo.com">Tanya Khovanova</a>)
+  <p>Two people are playing heads and tails, one casts <code>n</code>
+  coins, the other - <code>n+1</code>.  What is the probability that the
+  second one will have (strictly) more heads than the first one?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#headtail">solution</a>]<br><br></p></li>
+
+ <li id="soldiers">
+  A row of freshly recruited soldiers is standing before a sergeant who
+  gives a command to turn right.  Some soldiers turn right, some left,
+  and then they try to correct their mistake: if a soldier sees the face
+  of his neighbor, he assumes that he turned the wrong way and turns
+  around.  Will the situation stabilize and how?  How long will it take?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#soldiers">solution</a>]<br><br></p></li>
+
+ <li id="ball">
+  (from <a href="mailto:korsunsky@edc.org">Boris Korsunsky</a>)
+  <p>What is acceleration (or, if you prefer, deceleration) of a tennis
+  ball, dropped from a significant height, right after it bounced from
+  the pavement?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#ball">solution</a>]<br><br></p></li>
+
+ <li id="prod-sum">[<strong>added: 2000-07-05</strong>]
+  (from <a href="mailto:raffaello.giulietti@tinet.com">Raffaello Giulietti</a>)
+  <p>There are two mathematicians in a room.  The product of two
+  integers <code>&gt;=2</code> is given to the first mathematician, and
+  the sum of the same two integers is given to the second one.  Hence,
+  the first mathematician only knows the product and the second only
+  knows the sum of the two integers.  However, both are aware that the
+  first knows the product and the second knows the sum of the two
+  integers.</p>
+  <ul>
+   <li>The first mathematician is asked whether he can determine the
+    two numbers, and he answers <strong>no</strong>.</li>
+   <li>The second mathematician is then asked whether he can determine
+    the two numbers, and he too answers <strong>no</strong>.</li>
+   <li>The first mathematician is then asked once again whether he can
+    determine the two numbers and this time the answer is
+    <strong>yes</strong>!</li>
+  </ul>
+  What are these two numbers?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#prod-sum">solution</a>]<br><br></p></li>
+
+ <li id="children">[<strong>added: 2000-11-26</strong>]
+  A couple is determined to have at least one son and at least one
+  daughter.
+  What is the expected total number of children they will have?
+  <p>[<a href="http://www.podval.org/~sds/notes.html#children">solution</a>]<br><br></p></li>
+
+ <li id="glass-balls">[<strong>added: 2001-09-28</strong>]
+  <p>You have two (2) identical glass balls and a 100-storey building.
+  If you drop such a ball from the a certain floor, it might break
+  (obviously, if it breaks when dropped from the <code>i</code>th floor,
+  it will also break when dropped from all floors above it.
+  You have to find such a floor that the balls do not break when dropped
+  from the floors below it, but do break when dropped from it and floors
+  above it.  You may expend both balls.
+  What is the minimum number of drops you will have to make?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#glass-balls">solution</a>]<br><br></p></li>
+
+ <li id="lockers">[<strong>added: 2001-10-02</strong>]
+  (from <a href="mailto:Sergey@knowledge-management.com">Sergey Kagan</a>)
+  <p>There are 1000 lockers (all locked) and 1000 kids,
+  who lock the unlocked lockers and unlock the locked ones.
+  The first kid touches (i.e., opens) each locker.
+  The second kid touches (i.e., locks) all even lockers.
+  The third kid touches (i.e., opens the locked ones and closes the
+  unlocked ones) all lockers with number divisible by 3.
+  The fourth kid touches the lockers number 4, 8, 12 etc.
+  After the 1000th kid locks (or unlocks, if it was locked already)
+  the locker number 1000, how many lockers are open?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#lockers">solution</a>]<br><br></p></li>
+
+ <li id="corridors">[<strong>added: 2001-11-20</strong>]
+  <p>3 dark corridors (of the same length) meet in a small room.
+  A cop is trying to catch a bum there.
+  The cop runs with speed 2 meters per secons,
+  while the bum can only make one meter per second.
+  The cop has a weak flashlight - it lights only 1 meter of space.
+  What is the maximum corridor length for which the cop has a winning
+  strategy against the bum?
+  E.g. if all the corridors are just 1 meter, then the cop will stand
+  in the room, light the corridors one after another and catch the bum.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#corridors">solution</a>]<br><br></p></li>
+
+ <li id="ruler-function">[<strong>added: 2002-05-23</strong>]
+  (from <a href="http://www.haible.de/bruno/">Bruno Haible</a>)
+  <p>For all integers numbers <code>m</code>,</p>
+  <blockquote><p><code>
+     ((m - 1) &amp; (- m - 1)) + 1 == m &amp; -m
+  </code></p></blockquote>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#ruler-function">solution</a>]<br><br></p></li>
+
+ <li id="sum-pos">[<strong>added: 2002-07-02</strong>]
+  (from <a href="http://www-cs-faculty.stanford.edu/~knuth/taocp.html">TAOCP</a>)
+  <p>Let <code>X</code> and <code>Y</code> be two independent,
+  identically distributed random variables with zero mean, which are
+  more likely to be positive than to be negative.  Obviously, their
+  sum <code>X+Y</code> also has zero mean, but is it necessarily more
+  likely to be positive than to be negative?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#sum-pos">solution</a>]<br><br></p></li>
+
+ <li id="color-caps">[<strong>added: 2002-07-02</strong>]
+  (from <a href="mailto:mkhmelnitskiy@yahoo.com">Mikhail Khmelnitskiy</a>)
+  <p>A stupid king decided to eliminate his Academy of Sciences (as a
+  cost-saving measure, after he slashed taxes), and decided to do it as
+  follows: all the scholars are put in one line, one after another, so
+  that the first one sees everyone ahead of him (second through last),
+  while the second sees the third scholar through the last one, and the
+  last one does not see anyone.  Then he puts a dunce cap, either red or
+  blue, on each scholar's head, so that the first one knows the cap
+  colors of rest of them, but not his own, the second knows the cap
+  colors of the third through the last one etc.  Finally, each scholar,
+  starting with the first one, is asked what color his cap is, and if
+  his guess (which all the other scholars hear) is wrong, he is
+  executed.  The scholars may agree in advance on what to do.</p>
+  <p>What should the scholars do to minimize the casualties?</p>
+  <p>E.g., they can agree that each odd-numbered scholar will say the
+  cap color of the next one, so that the even-numbered scholars will
+  survive.   Can they do better than that?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#color-caps">solution</a>]<br><br></p></li>
+
+ <li id="cigarette">[<strong>added: 2005-07-26</strong>]
+  (from <a href="mailto:tanyakh@yahoo.com">Tanya Khovanova</a>)
+  <p>A bum makes 1 cigarette out of 4 cigarette butts.
+   He has 24 cigarette butts.  How many cigarettes can he smoke?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#cigarette">solution</a>]<br><br></p></li>
+
+ <li id="ellipse">[<strong>added: 2005-08-10</strong>]
+  <p>An ellipse without any markings (no center, no foci, no axes) is drawn.
+   Restore the center, foci and axes and draw the tangent to the
+   ellipse though a given point on (or off) it using a compass and a ruler.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#ellipse">solution</a>]<br><br></p></li>
+
+ <li id="urn-all-white">[<strong>added: 2005-09-26</strong>]
+  <p>An urn contains <code>N</code> black and white balls, and we do not
+   know how many balls of each kind there is:
+   <code>Pr(#white=K)=<sup>1</sup>/<sub>(N+1)</sub></code>
+   for <code>K=0,...,N</code>.
+   The urn was sampled (with replacement) <code>M</code> times and every
+   time the ball was while.
+   What is the <em>posterior</em> probability that all balls in the urn
+   are white?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#urn-all-white">solution</a>]<br><br></p></li>
+
+ <li id="ants">[<strong>added: 2006-01-21</strong>]
+  <p>Placed on a 1 meter long horizontal bar, an ant moving with a speed
+   of 1 m/s, will fall off one end in at most 1 second.
+   When two ants run into each other, they both turn around and keep
+   running with the same speed.
+   Suppose 1000 ants are placed on the bar arbitrarily and start running
+   in arbitrary directions.
+   How long will it take them all to fall off the bar ends?
+   Assume that ants have zero size.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#ants">solution</a>]<br><br></p></li>
+
+ <li id="color-caps-infty">[<strong>added: 2009-06-12</strong>]
+  <p>This is a ramification of a <a href="http://www.podval.org/~sds/puzzles.html#color-caps">previous problem</a>.</p>
+  <p>Suppose there are <em>countably infinitely</em> many scolars,
+   and all of them can see all the others (except for oneself).
+   They are asked all at once, i.e., they do <em>not</em> hear the
+   answers of the others.
+   They <em>win</em> if only finitely many of them are wrong
+   (alternatively: if either <em>all</em> are wrong
+   or <em>all</em> are correct).</p>
+  <p>Prove that they have a winning strategy.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#color-caps-infty">solution</a>]<br><br></p></li>
+
+ <li id="inscribed-triangle">[<strong>added: 2009-12-29</strong>]
+  (from <a href="http://jou.rfixe.com/forum/viewtopic.php?p=103226#p103226">jourfixe</a>)
+  <p>An equilateral triangle is inscribed in a right triangle so that
+    one of its sides is parallel to the hypotenuse. Then everything
+    except for the hypotenuse and the vertexes on it are erased.</p>
+  <p>Restore the full picture using a compass and a ruler.</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#inscribed-triangle">solution</a>]<br><br></p></li>
+
+ <li id="probability-olympiad">[<strong>added: 2014-05-28</strong>]
+   (from <a href="http://www.math.msu.su/department/probab//olimpia/olimpia.htm">МГУ</a>
+   via <a href="http://hovashka.livejournal.com/127020.html">Tanya Khovanova</a>)
+   <ol><li>There are two 6-sided dice with numbers 1 through 6 on their
+       faces.  Is it possible to "load" the dice so that when the two
+       dice are thrown the sum of the numbers on the dice are
+       distributed uniformly on the set <code>{2,...,12}</code>?  By
+       loading the dice we mean assigning probabilities to each side of
+       the dice. You do not have to "load" both dice the same way.</li>
+     <li>Students who are trying to solve a problem are seated on one
+       side of an infinite table. The probability that a student can
+       solve the problem independently is 1/2. In addition, each student
+       will be able to peek into the work of his or her right and left
+       neighbor with a probability of 1/4 for each. All these events are
+       independent. Assume that if student X gets a solution by solving
+       or copying, then the students who had been able to peek into the
+       work of student X will also get the solution. Find the
+       probability that a specific student gets the solution.</li></ol>
+   <p>[<a href="http://www.podval.org/~sds/notes.html#probability-olympiad">solution</a>]<br><br></p></li>
+
+ <li id="poison-wine">[<strong>added: 2014-09-30</strong>]
+  (from <a href="http://goodriddlesnow.com/">Trevor Zablocki</a>)
+  <p>A man has 1000 barrels of wine that he wants to use in 1 day.
+   1 barrel is poisoned. He has 10 plants which will die in 1 day if
+   watered by the poisoned wine.
+   How can he determine which barrel is poisoned?</p>
+  <p>[<a href="http://www.podval.org/~sds/notes.html#poison-wine">solution</a>]<br><br></p></li>
+
+ <!--
+ <li id="">[<strong>added: </strong>]
+  <p></p>
+  <p>[<a href="notes.html#">solution</a>]<br><br></p></li>
+  -->
+</ol>
+<hr>
+
+<p><a href="mailto:sds@gnu.org?subject=new+puzzle">Drop me a note</a>
+with your favorite puzzle!</p>
+
+<p>If you are too lazy to do the problems yourself, you can read the
+ <a href="http://www.podval.org/~sds/notes.html">notes and answers</a>.</p>
+
+<h1>Math Problem Sites</h1>
+
+<ul>
+ <li><a href="http://zadachi.mccme.ru/">Moscow 57th School</a>
+  [in Russian]</li>
+ <li><a href="http://mccme.narod.ru/">misc</a> [in Russian]</li>
+ <li><a href="http://www.ocf.berkeley.edu/~wwu/riddles/intro.shtml">hardcore
+   tech-interview style riddles</a></li>
+</ul>
+
+<p><br><br></p><hr>
+
+<table class="footer"><tbody><tr><td class="left">
+ <a href="http://www.podval.org/~sds/sds.html">Sam Steingold</a><address><a href="mailto:sds@gnu.org?subject=puzzles.html">&lt;sds@gnu.org&gt;</a></address></td>
+ <td class="center"><a href="http://validator.w3.org/check/referer"><img src="./math puzzles_problems_files/valid-html5" alt="Valid HTML" height="31" width="88"></a>
+ <a href="http://www.w3.org/Style/CSS/"><img src="./math puzzles_problems_files/mwcts" alt="Use CSS" height="31" width="88"></a>
+ <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="./math puzzles_problems_files/vcss" alt="Valid CSS" height="31" width="88"></a></td>
+<td class="right">created: <strong>1998-01-01</strong><br>
+ <script type="text/javascript">document.write(updated());</script>touched: <strong>2014-12-29</strong>
+</td></tr></tbody></table>
+
+
+
+</body></html>

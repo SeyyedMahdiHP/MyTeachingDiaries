@@ -1,0 +1,1331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0195)http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="thumbnail" content="http://www.algorithmha.ir/css/algorithms.jpg"><meta property="og:image" content="http://www.algorithmha.ir/css/algorithms.jpg"><meta property="og:image:width" content="200"><meta property="og:image:height" content="200"><meta property="og:type" content="article"><meta http-equiv="Content-Language" content="fa"><meta name="owner" content="Masoud Aghdasifam, مسعود اقدسی‌فام"><meta name="author" content="Masoud Aghdasifam, مسعود اقدسی‌فام"><meta name="copyright" content="©algorithmha.ir"><meta name="generator" content="http://www.aghdasifam.ir">
+    <link rel="canonical" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/">
+    <meta name="robots" content="index,follow,all">
+    <meta name="googlebot" content="index,follow,all">
+    <meta name="description" content="بررسی معمای هشت وزیر یا n وزیر و راهبرد عقبگرد برای حل مسأله">
+    <meta name="date" content="2012-03-27T18:42:45">
+    <meta name="last-modified" content="2015-12-11T13:30:00">
+    <meta http-equiv="last-modified" content="2015-12-11T13:30:00">
+    <meta property="og:description" content="بررسی معمای هشت وزیر یا n وزیر و راهبرد عقبگرد برای حل مسأله">
+    <meta property="og:title" content="معمای هشت وزیر">
+    <meta property="og:url" content="http://www.algorithmha.ir/category-چالش-الگوریتمی/post-معمای-هشت-وزیر/">
+<title>
+	معمای هشت وزیر - الگوریتمستان
+</title><link rel="shortcut icon" href="http://www.algorithmha.ir/favicon.ico"><link href="./معمای هشت وزیر - الگوریتمستان_files/styles.css" type="text/css" rel="stylesheet"><link rel="alternate" type="application/rss+xml" title="Computer Algorithms - الگوریتمستان" href="http://www.algorithmha.ir/rss.xml">
+    <script async="" src="http://www.google-analytics.com/analytics.js"></script><script async="" src="./معمای هشت وزیر - الگوریتمستان_files/window.js" type="text/javascript" language="javascript">
+    </script>
+    <script type="text/x-mathjax-config;executed=true">
+          MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX","output/HTML-CSS"],
+            "HTML-CSS": { scale: 85},
+            tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+          });
+    </script>
+    <script type="text/javascript" src="./معمای هشت وزیر - الگوریتمستان_files/MathJax.js">
+    </script>
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66382076-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js" async="" defer=""></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+    <form method="post" action="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/?post=%u0645%u0639%u0645%u0627%u06cc-%u0647%u0634%u062a-%u0648%u0632%u06cc%u0631&amp;cat=%u0686%u0627%u0644%u0634-%u0627%u0644%u06af%u0648%u0631%u06cc%u062a%u0645%u06cc&amp;from=server" onsubmit="javascript:return WebForm_OnSubmit();" id="FormMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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bGdvcml0aG1oYS5pci9jYXRlZ29yeS3Zhdiz2KfYqNmC2KfYqi3YqNix2YbYp9mF2Yct2YbZiNuM2LPbjC9wb3N0LdmF2KjYp9it2Kst2qnYp9ix2KjYsdiv24wt2K/YsS3Zhdiz2KfYqNmC2KfYqi3YqNix2YbYp9mF2YfigIzZhtmI24zYs9uML3LYudmG2KfZiNuM2YYg2KjYrti024wg2KfYsiDZhdio2KfYrdirINm+2LHaqdin2LHYqNix2K8g2K/YsSDYs9mI2KfZhNin2Kog2YXYs9in2KjZgtin2Kog2KjYsdmG2KfZhdmH4oCM2YbZiNuM2LPbjCBH2YXYqNin2K3YqyDaqdin2LHYqNix2K/bjCDYr9ixINmF2LPYp9io2YLYp9iqINio2LHZhtin2YXZh+KAjNmG2YjbjNiz24xy2LnZhtin2YjbjNmGINio2K7YtNuMINin2LIg2YXYqNin2K3YqyDZvtix2qnYp9ix2KjYsdivINiv2LEg2LPZiNin2YTYp9iqINmF2LPYp9io2YLYp9iqINio2LHZhtin2YXZh+KAjNmG2YjbjNiz24wgZAIED2QWAmYPFQRtaHR0cDovL3d3dy5hbGdvcml0aG1oYS5pci9jYXRlZ29yeS3Zhdit2KfYs9io2KfYqi3YsduM2KfYttuML3Bvc3Qt2LbYsdioLdiy2YbYrNuM2LHZhy3Yp9uMLdmF2KfYqtix24zYsy3Zh9inL+oB2KjYrdirINiv2LEg2YXZiNix2K8g2LbYsdioINiy2YbYrNuM2LHZh+KAjNin24wg2YXYp9iq2LHbjNiz4oCM2YfYpyDZiCDYsdmI2LQg2b7bjNin2K/Zh+KAjNiz2KfYstuMINin2YTar9mI2LHbjNiq2YUg2b7Ysdin2YbYqtiy2KjZhtiv24wg2KjZh9uM2YbZh+KAjNuMINii2YYg2KjYpyDYsdmI2LQg2KrZgtiz24zZhSDZiCDYrdmEINmIINix2YjYtCDYqNix2YbYp9mF2YfigIzZhtmI24zYs9uMINm+2YjbjNinLti22LHYqCDYstmG2KzbjNix2YfigIzYp9uMINmF2KfYqtix24zYs+KAjNmH2KfqAdio2K3YqyDYr9ixINmF2YjYsdivINi22LHYqCDYstmG2KzbjNix2YfigIzYp9uMINmF2KfY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r9in24zaqdiz2KrYsdinL88B2KLYtNmG2KfbjNuMINio2Kcg2KfZhNqv2YjYsduM2KrZhSDYr9in24zaqdiz2KrYsdinINio2LHYp9uMINuM2KfZgdiq2YYg2qnZiNiq2KfZh9iq2LHbjNmGINmF2LPbjNixINiq2qnigIzZhdio2K/YoyDYr9ixINqv2LHYp9mBINmI2LLZhuKAjNiv2KfYsSDYqNiv2YjZhiDbjNin2YQg2YXZhtmB24wg2KjYpyDZgti32LnZhyDaqdivINio2Ycg2LLYqNin2YYgKytDIdin2YTar9mI2LHbjNiq2YUg2K/Yp9uM2qnYs9iq2LHYp88B2KLYtNmG2KfbjNuMINio2Kcg2KfZhNqv2YjYsduM2KrZhSDYr9in24zaqdiz2KrYsdinINio2LHYp9uMINuM2KfZgdiq2YYg2qnZiNiq2KfZh9iq2LHbjNmGINmF2LPbjNixINiq2qnigIzZhdio2K/YoyDYr9ixINqv2LHYp9mBINmI2LLZhuKAjNiv2KfYsSDYqNiv2YjZhiDbjNin2YQg2YXZhtmB24wg2KjYpyDZgti32LnZhyDaqdivINio2Ycg2LLYqNin2YYgKytDZAIDD2QWAmYPFQSNAWh0dHA6Ly93d3cuYWxnb3JpdGhtaGEuaXIvY2F0ZWdvcnkt2KjYsdmG2KfZhdmHLdmG2YjbjNiz24wt2LPbjC3ZvtmE2KfYsy3ZvtmE2KfYsy9wb3N0LdmF2KrYutuM2LHZh9in24wt2YXYsdis2Lkt2K/YsS3Ys9uMLdm+2YTYp9izLdm+2YTYp9izL5AB2YXYudix2YHbjCDZhdiq2LrbjNix2YfYp9uMINmF2LHYrNi5INiv2LEg2LLYqNin2YYg2KjYsdmG2KfZhdmH4oCM2YbZiNuM2LPbjCArK0Mg2Ygg2KLYtNmG2KfbjNuMINio2Kcg2YXZh9mF2KrYsduM2YYg2qnYp9ix2KjYsdiv2YfYp9uMINii2YbZh9inItmF2KrYutuM2LHZh9in24wg2YXYsdis2Lkg2K/YsSArK0OQAdmF2LnYsdmB24wg2YXYqti624zYsdmH2KfbjCDZhdix2KzYuSDYr9ixINiy2KjYp9mGINio2LHZhtin2YXZh+KAjNmG2YjbjNiz24wgKytDINmIINii2LTZhtin24zb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siDYsdmI2LTigIzZh9in24wg2b7YsSDaqdin2LHYqNix2K8g2LfYsdin2K3bjCDYp9mE2q/ZiNix24zYqtmFINio2LHYp9uMINit2YQg2KjZh9uM2YbZh+KAjNuMINmF2LPYp9im2YQg2KjYpyDZhdir2KfZhNuMINin2LIg2YXYrdin2LPYqNmH4oCM24wg2K/Zhtio2KfZhNmH4oCM24wg2YHbjNio2YjZhtin2obbjCnYsdmI2LQg2KjYsdmG2KfZhdmH4oCM2YbZiNuM2LPbjCDZvtmI24zYp8YC2KLYtNmG2KfbjNuMINio2Kcg2LHZiNi0INio2LHZhtin2YXZh+KAjNmG2YjbjNiz24wg2b7ZiNuM2KcgKNuM2Kcg2KjYsdmG2KfZhdmH4oCM2LHbjNiy24wg2b7ZiNuM2KcgLSBEeW5hbWljIFByb2dyYW1taW5nKSDYqNmHINi52YbZiNin2YYg24zaqduMINin2LIg2LHZiNi04oCM2YfYp9uMINm+2LEg2qnYp9ix2KjYsdivINi32LHYp9it24wg2KfZhNqv2YjYsduM2KrZhSDYqNix2KfbjCDYrdmEINio2YfbjNmG2YfigIzbjCDZhdiz2KfYptmEINio2Kcg2YXYq9in2YTbjCDYp9iyINmF2K3Yp9iz2KjZh+KAjNuMINiv2YbYqNin2YTZh+KAjNuMINmB24zYqNmI2YbYp9qG24xkAgMPZBYCZg8VBF9odHRwOi8vd3d3LmFsZ29yaXRobWhhLmlyL2NhdGVnb3J5Ldi32LHYp9it24wt2KfZhNqv2YjYsduM2KrZhS9wb3N0LdmF2LHYqtioLdiz2KfYstuMLdiv2LHYrNuML4EB2KLYtNmG2KfbjNuMINio2Kcg2LHZiNi0INmF2LHYqtio4oCM2LPYp9iy24wg2K/Ysdis24zYjCDZh9mF2LHYp9mHINio2Kcg2YLYt9i52Ycg2qnYryDYqNmHINiy2KjYp9mGINio2LHZhtin2YXZh+KAjNmG2YjbjNiz24wgKytDHNmF2LHYqtio4oCM2LPYp9iy24wg2K/Ysdis24yBAdii2LTZhtin24zbjCDYqNinINix2YjYtCDZhdix2KrYqOKAjNiz2KfYstuMINiv2LHYrNuM2Iwg2YfZhdix2KfZhyDYqNinINmC2LfYudmHINqp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2YjYp9mH24zZhTxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPiA0IDwvc3Bhbj7ZiNiy24zYsSDYsdinINiv2LEg24zaqSDYtdmB2K3ZhyDYtNi32LHZhtisINio2Ycg2KfYqNi52KfYrzxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPiA3IDwvc3Bhbj7Yr9ixPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+IDcgPC9zcGFuPtmC2LHYp9ixINiv2YfbjNmFINio2Ycg2YbYrdmI24wg2qnZhyDZh9uM2oYg2qnYr9in2YUg2KfYsiDZiNiy24zYsdmH2Kcg2YfZhdiv24zar9ixINix2Kcg2KrZh9iv24zYryDZhtqp2LHYr9mHIDxiciAvPtmIPGJyIC8+ICLZh9mF2obZhtuM2YYiPGJyIC8+INiv2LEg2LXZiNix2KrbjNqp2Ycg2YfYsSDZhdmH2LHZhyDYr9uM2q/YsduMINix2Kcg2K/YsSDZh9ixINuM2qkg2KfYsiDYrtin2YbZhyDZh9in24wg2LTYt9ix2YbYrCDZgtix2KfYsSDYr9mH24zZhSDYqtmI2LPYtyDZiNiy24zYsdmH2Kcg2YXZiNix2K8g2KrZh9iv24zYryDZgtix2KfYsSDar9uM2LHYryI8YnIgLz48YnIgLz7ZhduMINiu2YjYp9mH24zZhSDYp9uM2YYg2YXYs9im2YTZhyDYsdinINio2Kcg2KfZhNqv2YjYsduM2KrZhSDamNmG2KrbjNqpINi02KjbjNmHINiz2KfYstuMINqp2YbbjNmFLiDZhdi32YTZiNio2LPYqjo8YnIgLz7Yp9mE2YEtINiz2KfYrtiq2KfYsSDamNmGPGJyIC8+2KgtINiz2KfYrtiq2KfYsSDaqdix2YXZiNiy2YjZhTxiciAvPtisLSDYqti52K/Yp9iv24wg2YXYq9in2YQg2KjZhyDYudmG2YjYp9mGINmG2LPZhCDYp9mI2YTbjNmHPGJyIC8+2K8t2KrYp9io2Lkg2LTYp9uM2LPYqtqv24w8YnIgLz7Zhy0g2LnZhdmE2q/YsSDYqtmC2KfYt9i5KNio2Ycg2YfZhdix2KfZhyDZhdir2KfZhCk8YnIgLz7ZiC0g2LnZhdmE2q/YsSDYrNmH2LQo2KjZhyDZh9mF2LHYp9mHINmF2KvYp9mEKTxiciAvPjxiciAvPjxiciAvPjxiciAvPjxpbWcgYWx0PSIxMSIgc3JjPSJodHRwOi8vd3d3LmFsZ29yaXRobWhhLmlyL3NtaWxpZXMvMTEuZ2lmIiAvPjxpbWcgYWx0PSIxMCIgc3JjPSJodHRwOi8vd3d3LmFsZ29yaXRobWhhLmlyL3NtaWxpZXMvMTAuZ2lmIiAvPjxiciAvPtix2KfZh9mG2YXYp9uM24wg2KjZgdix2YXYp9uM24zYryDZhNi32YHYp9in2KfYp9in2KfYp9in2KfYp9in2KfYp9in2KfYp9in2KfYp9in2KfYpwBkAgQPZBYCZg8VBXI8YSByZWw9Im5vZm9sbG93IiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iaHR0cDovL3d3dy5hbGdvcml0aG1oYS5pci9wb3N0LSVkOSU4NSVkOCViOSVkOSU4NSVkOCVhNyVkYiU4Ij7Yr9in2YbYpzwvYT5B24zaqdi02YbYqNmH2Iwg27Yg2KfYs9mB2YbYryDZhdin2Ycg27Hbs9u527HYjCDYs9in2LnYqiDbsdu0Otuy27YNZGlyZWN0aW9uOnJ0bI8C2LPZhNin2YUu2LPYp9uM2Kog2K7ZiNio24wg2K/Yp9ix24zZhiDZiNmE24wg2YXZhiDZgtio2YTYpyDYqNix2KfbjCDYp9mI2YTbjNmGINio2KfYsSDYp9uM2YYg2YXYudmF2KfYsdmIINiv2LE8c3BhbiBjbGFzcz0iVGltZXNGb250Ij4gMTozMDwvc3Bhbj7Yq9in2YbbjNmHINit2YTYtCDaqdix2K/ZhTxiciAvPtmI2YTbjCDYr9ixINqp2YQg2KjYpyDYrdin2YTZhzxpbWcgYWx0PSIwMyIgc3JjPSJodHRwOi8vd3d3LmFsZ29yaXRobWhhLmlyL3NtaWxpZXMvMDMuZ2lmIiAvPgBkAgUPZBYCZg8VBRHYudmE24wg2obZiNio24zZhjvYrNmF2LnZh9iMINuy27Ig2KLYsNixINmF2KfZhyDbsduz27nbstiMINiz2KfYudiqINuy27E627Lbtw1kaXJlY3Rpb246cnRsgQjYqNinINiq2LTaqdixINmB2LHYotmI2KfZhiDYp9iyINiv2YjYs9iq2KfZhiA8YnIgLz7Yp9mI2YYg2YLYr9uM2YUg2YfYpyDaqdmHINix2LTYqtmHINmF2YfZhtiv2LPbjCDaqdin2YXZvtuM2YjYqtixINmC2KjZiNmEINi02K/ZhSZuYnNwOyZuYnNwO9iMINiv2LHYsyDYqNix2YbYp9mF2Ycg2YbZiNuM2LPbjCDYqNmHINiy2KjYp9mGINmB2LHYqtix2YYg2KfYsdin2KbZhyDZhduM2LTYr9iMINm+2LHZiNqY2Ycg2K/YsdizINmF2Kcg2YfYtNiqINmI2LLbjNixINio2YjYryDZiCDYrNin2YTYqCDYp9uM2YYg2qnZhyDYp9iz2KrYp9ivINin24zZhiDYs9im2YjYp9mEINix2Kcg2K/YsSDYp9mF2KrYrdin2YYg2b7Yp9uM2KfZhiDYqtix2YUg2KLZiNix2K8g2Ygg2q/ZgdiqINmG2YXYsdmHINm+2LHZiNqY2Ycg2KjZhyDaqdiz24wg2K/Yp9iv2Ycg2YXbjNi02Ycg2qnZhyDYp9uM2YYg2LPYptmI2KfZhCDYsdinINiz2LEg2KfZhdiq2K3Yp9mGINmH2YUg2K3ZhCDaqdmG2YcuPGJyIC8+24zYp9iv2YXZhyDaqdmHINqp2YQg2KrYsdmFINqp2KfYsdmFINin24zZhiDYqNmI2K8g2qnZhyDYrdin2YTYqiDZh9in24wg2YXYrtiq2YTZgSDZh9i02Kog2YjYstuM2LEg2LHYpyDYsdmI24wg2qnYp9i62LAg2YXbjNqp2LTbjNiv2YUg2KrYpyDYtNin24zYryDYqNiq2YjZhtmFINix2KfYqNi32Ycg2KfbjCDYqNuM2YYg2KLZhtmH2Kcg2b7bjNiv2Kcg2qnZhtmFLjxiciAvPtii2K7YsSDYs9ixINmH2YUg2KjYpyDaqdin2LHYp9qp2KrYsSDYr9ixINit2KfZhNiqINiq2qnYs9iqINi12YHYrdmHINi02LfYsdmG2Kwg2LHYpyDYr9ixINiy2KjYp9mGINmB2LHYqtix2YYg2qnYtNuM2K/ZhS48YnIgLz7YudmE24wg2obZiNio24zZhiDYjCDZgdin2LHYuiDYp9mE2KrYrdi124zZhCDYsdi02KrZhyDZhdmH2YbYr9iz24wg2qnYp9mF2b7bjNmI2KrYsSDYs9iu2Kog2KfZgdiy2KfYsSDYp9iyINiq2YfYsdin2YYg2KzZhtmI2KggKNmI2LHZiNiv24wg2LPYp9mEPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+IDEzNzIpPC9zcGFuPgBkAgYPZBYCZg8VBQrZhdiz2LnZiNivPdiv2YjYtNmG2KjZh9iMINux27Yg2K/bjCDZhdin2Ycg27Hbs9u527LYjCDYs9in2LnYqiDbsduzOtux27QNZGlyZWN0aW9uOnJ0bKoB2K7bjNmE24wg2LnYp9mE24wg2KjZiNivINmH2YUg2LPZiNin2YTYtCDZiCDZh9mFINiq2YjYttuM2K3Yp9iqINi02YXYpyDZhNi32YHYpyDYp9iyINin24zZhiDYr9iz2Kog2YXYs9im2YTZhyDZh9inINin2YTYqNiq2Ycg2KjYpyDaqdivINin2YTar9mI2LHbjNiq2YUg2YLYsdin2LEg2KjYr9uM2K8AZAIHD2QWAmYPFQUI2LPYp9ix2KdD2obZh9in2LHYtNmG2KjZh9iMINuyINio2YfZhdmGINmF2KfZhyDbsduz27nbstiMINiz2KfYudiqINuw27E627Pbsw1kaXJlY3Rpb246cnRsxgHYs9mE2KfZhS4g2YXYsdiz24wg2KfYsiDYs9in24zYqiDYrtmI2KjYqtmI2YYg2YXZhiDYqtmI2LbbjNitINiu2Lcg2KjZhyDYrti3INqp2K8g2KjYsdmG2KfZhdmHPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+IG4gPC9zcGFuPtmI2LLbjNixINix2Ygg2YXbjNiu2YjYp9iz2KrZhSDYqNinPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+ICsrYzwvc3Bhbj4AZAIID2QWAmYPFQUC2LNB2b7Zhtis2LTZhtio2YfYjCDbsduyINiq24zYsSDZhdin2Ycg27Hbs9u527PYjCDYs9in2LnYqiDbsduwOtux27QNZGlyZWN0aW9uOnJ0bKkE2KjYpyDYs9mE2KfZhTxiciAvPtmF2YYg24wg2KjYsdmG2KfZhdmHINmF24zYrtmI2KfZhSDYqNinINi12YjYsdiqINmF2LPYp9mE2Ycg2LLbjNixINmE2LfZgdinINix2KfZh9mG2YXYp9uM24wg2KjZgdix2YXYp9uM24zYr9iMPGJyIC8+24zaqSDZhdix2KjYuSDaqdmHINm+2YbYrCDYrdix2YjZgSDYp9mG2q/ZhNuM2LPbjDxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPiBxPC9zcGFuPtiMPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+cDwvc3Bhbj7YjDxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPnI8L3NwYW4+2Iw8c3BhbiBjbGFzcz0iVGltZXNGb250Ij5zPC9zcGFuPtiMPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+dCA8L3NwYW4+2KjYpyDYs9in24zYsiDbjNqp2LPYp9mGINmIINix2YbaryDZhdi02qnbjCDYqNiv2YjZhiDYqNix2K7ZiNix2K8g2KjYpyDbjNqp2K/bjNqv2LEg2K/YsdmI2YYg2YXYsdio2Lkg2YLYsdin2LEg2Kjar9uM2LHZhtivLjxiciAvPtio2Kcg2KfYs9iq2YHYp9iv2Ycg2KfYsiDYqNix2YbYp9mF2Ycg2YXYqtmE2Kgg2Ygg2KrYp9io2Lkg2LHZhtiv2YjZhQBkAgkPZBYCZg8VBQRzYXJhQdm+2YbYrNi02YbYqNmH2Iwg27HbsiDYqtuM2LEg2YXYp9mHINux27Pbuduz2Iwg2LPYp9i52Kog27HbsDrbsdu1DWRpcmVjdGlvbjpydGyXBNmF2YYg24wg2KjYsdmG2KfZhdmHINmF24zYrtmI2KfZhSDYqNinINi12YjYsdiqINmF2LPYp9mE2Ycg2LLbjNixINmE2LfZgdinINix2KfZh9mG2YXYp9uM24wg2KjZgdix2YXYp9uM24zYr9iMPGJyIC8+24zaqSDZhdix2KjYuSDaqdmHINm+2YbYrCDYrdix2YjZgSDYp9mG2q/ZhNuM2LPbjDxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPiBxPC9zcGFuPtiMPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+cDwvc3Bhbj7YjDxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPnI8L3NwYW4+2Iw8c3BhbiBjbGFzcz0iVGltZXNGb250Ij5zPC9zcGFuPtiMPHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+dCA8L3NwYW4+2KjYpyDYs9in24zYsiDbjNqp2LPYp9mGINmIINix2YbaryDZhdi02qnbjCDYqNiv2YjZhiDYqNix2K7ZiNix2K8g2KjYpyDbjNqp2K/bjNqv2LEg2K/YsdmI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hyDZh9uM2oYg2qnYr9in2YUg2KfYsiDZiNiy24zYsdmH2Kcg2YfZhdiv24zar9ixINix2Kcg2KrZh9iv24zYryDZhtqp2LHYr9mHIDxiciAvPtmIPGJyIC8+ItmH2YXahtmG24zZhiI8YnIgLz7Yr9ixINi12YjYsdiq24zaqdmHINmH2LEg2YXZh9ix2Ycg2K/bjNqv2LHbjCDYsdinINiv2LEg2YfYsSDbjNqpINin2LIg2K7Yp9mG2Ycg2YfYp9uMINi02LfYsdmG2Kwg2YLYsdin2LEg2K/Zh9uM2YUg2KrZiNiz2Lcg2YjYstuM2LHZh9inINmF2YjYsdivINiq2YfYr9uM2K8g2YLYsdin2LEg2q/bjNix2K8iPGJyIC8+PGJyIC8+2YXbjCDYrtmI2KfZh9uM2YUg2KfbjNmGINmF2LPYptmE2Ycg2LHYpyDYqNinINin2YTar9mI2LHbjNiq2YUg2pjZhtiq24zaqSDYtNio24zZhyDYs9in2LLbjCDaqdmG24zZhS4g2YXYt9mE2YjYqNiz2Ko6PGJyIC8+2KfZhNmBLSDYs9in2K7Yqtin2LEg2pjZhjxiciAvPtioLSDYs9in2K7Yqtin2LEg2qnYsdmF2YjYstmI2YU8YnIgLz7YrC0g2KrYudiv2KfYr9uMINmF2KvYp9mEINio2Ycg2LnZhtmI2KfZhiDZhtiz2YQg2KfZiNmE24zZhzxiciAvPtivLdiq2KfYqNi5INi02KfbjNiz2Krar9uMPGJyIC8+2YctINi52YXZhNqv2LEg2KrZgtin2LfYuTxiciAvPtmILSDYudmF2YTar9ixINis2YfYtDxiciAvPjxpbWcgYWx0PSIxMCIgc3JjPSJodHRwOi8vd3d3LmFsZ29yaXRobWhhLmlyL3NtaWxpZXMvMTAuZ2lmIiAvPgBkAg8PZBYCZg8VBQjbjNit24zbjDvYrNmF2LnZh9iMINuxINii2KjYp9mGINmF2KfZhyDbsduz27nbtNiMINiz2KfYudiqINuy27M627Dbtg1kaXJlY3Rpb246cnRsctmE2LfZgdinJm5ic3A7Jm5ic3A72LHYp9mH2YbZhdin24zbjCDaqdmG24zYrzxiciAvPjxpbWcgYWx0PSIwMyIgc3JjPSJodHRwOi8vd3d3LmFsZ29yaXRobWhhLmlyL3NtaWxpZXMvMDMuZ2lmIiAvPgBkAhAPZBYCZg8VBQhzYWhyYTIwMD3YtNmG2KjZh9iMINux27Yg2KLYqNin2YYg2YXYp9mHINux27Pbudu02Iwg2LPYp9i52Kog27HbuTrbtdu5DWRpcmVjdGlvbjpydGzHB9iz2YTYp9mFPGJyIC8+2K/ZiNiz2KrYp9mGINqp2LPbjCDZhduM2KrZiNmG2Ycg2KjZhyDYp9uM2YYg2LPZiNin2YQg2KzZiNin2Kgg2KjYr9mHPGJyIC8+2YfZgdiqINit2KfZhNiqINiq2LnYsduM2YEg2LTYr9mHLtio2Ycg2LHYp9mHINit2YQg2YfYp9uMINmB2LHZhdmI2YTZhyDaqdix2K/ZhiDYqNin2LLbjCDZh9i02Kog2YjYstuM2LEg2LHYpyDYqNuM2KfYqNuM2K88YnIgLz7YrNmI2KfYqNi0INi02LXYqiDZiCDahtmH2KfYsSDYqNmHINiq2YjYp9mGINmH2LTYqiDZhduM2LTZiNivINin2YXYpyDahti32YjYsduM2J88YnIgLz7Ys9mHINix2KfZhyDYrdmEINiv2KfYsdivINit2K/Yp9mC2YQg24zaqduMINix2Kcg2KjbjNin2KjbjNivPGJyIC8+PHNwYW4gY2xhc3M9IlRpbWVzRm9udCI+MSBTdGFydC1zdGF0ZTwvc3Bhbj48YnIgLz48c3BhbiBjbGFzcz0iVGltZXNGb250Ij4yIDwvc3Bhbj7Zhdis2YXZiNi52Ycg2KfYudmF2KfZhNuMINqp2Ycg2LnYp9mF2YQg2YLYp9iv2LEg2KfYs9iqINin2YbZh9inINix2Kcg2KfZhtis2KfZhSDYr9mH2K88YnIgLz48c3BhbiBjbGFzcz0iVGltZXNGb250Ij4zIDwvc3Bhbj7Zgdi22KfbjCDYrdin2YTYqjxiciAvPjxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPjQgcGF0aCA8L3NwYW4+24zYpyDZhdiz24zYsTxiciAvPjxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPjUgcW9hbCB0ZXN0PC9zcGFuPjxiciAvPjxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPjYgPC9zcGFuPtiq2KfYqNi5INmH2LLbjNmG2Ycg2YXYs9uM2LE8YnIgLz48c3BhbiBjbGFzcz0iVGltZXNGb250Ij43IDwvc3Bhbj7Zhtiq24zYrNmHPGJyIC8+2KjYsdin24wg2KrYp9io2Lkg2YfYstuM2YbZhyDZhdiz24zYsSDZiDxzcGFuIGNsYXNzPSJUaW1lc0ZvbnQiPiBRb2FsIHRlc3QgPC9zcGFuPtmIINmB2LbYp9uMINit2KfZhNiqINiq2LnYsduM2YEg2K/Ysdiz2Kog2KfZhtis2KfZhSDYr9mH24zYryAAZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WDQUQY3RsMDAkc2VhcmNoX2J0bgUaY3RsMDAkUG9zdE1hc3RlciRzY29yZU5vbmUFF2N0bDAwJFBvc3RNYXN0ZXIkc2NvcmUxBRdjdGwwMCRQb3N0TWFzdGVyJHNjb3JlMQUXY3RsMDAkUG9zdE1hc3RlciRzY29yZTIFF2N0bDAwJFBvc3RNYXN0ZXIkc2NvcmUyBRdjdGwwMCRQb3N0TWFzdGVyJHNjb3JlMwUXY3RsMDAkUG9zdE1hc3RlciRzY29yZTMFF2N0bDAwJFBvc3RNYXN0ZXIkc2NvcmU0BRdjdGwwMCRQb3N0TWFzdGVyJHNjb3JlNAUXY3RsMDAkUG9zdE1hc3RlciRzY29yZTUFF2N0bDAwJFBvc3RNYXN0ZXIkc2NvcmU1BRpjdGwwMCRQb3N0TWFzdGVyJElzUHJpdmF0ZVohhD0qvQOJV2vmRGHemHrZCM0bMYAEnrM6wGybQRhJ">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['FormMain'];
+if (!theForm) {
+    theForm = document.FormMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./معمای هشت وزیر - الگوریتمستان_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var preid="PostMaster_"//]]>
+</script>
+
+<script src="./معمای هشت وزیر - الگوریتمستان_files/WebResource(1).axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="400A91F0">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABcKEQUu2z+bGXbJ/OQyB7N1PCKEe6UViU07IqgVkAfhB3pcxXaVhfgRwd5VQ2+XzwGuJq8vCmYfpbU2b73Z7nMA0CqDWtPCyqrjifBJMe2JoAwz1oTmZjfSht46G0H971KcK+gfux44jVLdBO1Fuyyi8RQXHGQRrrEcat3tucvYMPzWBdESZOq/BaRg8HGo1TO5hOyq8VcQF/BMGQ+3saI6CmLnZFBZP2Qyo17i/Q0RlEE89oaWTTsu6pH5CvwcbCZp5Eee6sGP8qmc9tTOah67HT9MMpgUHvdRsQ97hvzO0XZkamslTylfLBUmhfRz3KTFP37r1NZXKy9P0heTu9WmNhO433/ygc9pulNRfBkcpIcyaYtTL6O1iEtAy209oE5OK8vRTNRhFHKbT3OjPflDKQLt3j+pmjEZTpccbY8rP7s8EeXf4q/RIckHh6gw/T6TZ9b17CkybtLH7hl/oeDtVQluU60huWFAdnXyYppQVergLMU8j0VDhPELLWb/O0zxGO39H1HLUPjC2nl/FRt5">
+</div>
+        <div class="Blog">
+            <div>
+                <div class="hright">
+                    <p>
+                        <a href="http://www.algorithmha.ir/" target="_self" title="صفحه‌ی اصلی">
+                            <img alt="صفحه‌ی اصلی" src="./معمای هشت وزیر - الگوریتمستان_files/home.jpg" title="صفحه‌ی اصلی" class="NoBorder" width="64" height="64"></a>
+                    </p>
+                    <p>
+                        <a href="http://www.algorithmha.ir/rss.xml" target="_blank" title="RSS Feed">
+                            <img alt="RSS Feed" title="RSS Feed" width="64px" src="./معمای هشت وزیر - الگوریتمستان_files/rssfeed.jpg" class="NoBorder"></a>
+                    </p>
+                </div>
+                <div class="floatleft">
+                    <img title="الگوریتمستان - برنامه‌نویسی و طراحی الگوریتم" alt="الگوریتمستان - برنامه‌نویسی، طراحی الگوریتم و آمادگی مسابقات برنامه‌نویسی" src="./معمای هشت وزیر - الگوریتمستان_files/header.jpg" class="NoBorder">
+                </div>
+            </div>
+            <div class="Clear">
+            </div>
+            <div>
+                <div class="upright">
+                    <img alt="الگوریتمستان" src="./معمای هشت وزیر - الگوریتمستان_files/algorithms.jpg" title="الگوریتمستان" class="NoBorder" width="100">
+                </div>
+                <div class="ACMLink">
+                    <div class="ACMLink1">
+                        <div class="ACMLink11">
+                            ● وب‌گاه مجموعه سوالات منطقه‌ای و جهانی مسابقات برنامه‌نویسی ACM-ICPC، با امکان
+                        ارسال پاسخ و بررسی جواب.
+                        </div>
+                        <div class="ACMLink12">
+                            <a href="https://icpcarchive.ecs.baylor.edu/" target="_blank" title="وب‌گاه آمادگی آرشیو مسابقات برنامه‌نویسی ACM">
+                                <img alt="وب‌گاه بایگانی مسابقات برنامه‌نویسی ACM" title="وب‌گاه بایگانی مسابقات برنامه‌نویسی ACM" src="./معمای هشت وزیر - الگوریتمستان_files/acmicpc.jpg" class="NoBorder">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="UVALink">
+                    <div class="ACMLink1">
+                        <div class="UVALink11">
+                            ● علاقه‌مندان به شرکت در مسابقات برنامه‌نویسی و حل سوالات الگوریتمی می‌توانند از
+                        این وب‌گاه معتبر به همراه <a href="http://www.algorithmha.ir/category-%DA%A9%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/" target="_blank">کتاب‌های معرفی شده</a> جهت تمرین و آمادگی بیشتر استفاده کنند.
+                        </div>
+                        <div class="UVALink12">
+                            <a href="http://uva.onlinejudge.org/" target="_blank" title="وب‌گاه آمادگی مسابقات برنامه‌نویسی با نمونه سوالات برنامه‌نویسی متنوع">
+                                <img alt="وب‌گاه آمادگی مسابقات برنامه‌نویسی با نمونه سوالات برنامه‌نویسی متنوع" title="وب‌گاه آمادگی مسابقات برنامه‌نویسی با نمونه سوالات برنامه‌نویسی متنوع" src="./معمای هشت وزیر - الگوریتمستان_files/UVA.jpg" class="NoBorder">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Clear">
+            </div>
+            <div class="style1">
+                <div class="style2">
+                    کاربران حاضر در وب‌گاه: <b>
+                        ۳</b> کاربر - عنوان‌ و توضیح تمامی نوشته‌های وب‌گاه را در <b><a href="http://www.algorithmha.ir/sitemap.aspx" ط="" target="_blank" title="نقشه‌ی سایت - sitemap">نقشه‌ی وب‌گاه </a></b>ببینید.
+                </div>
+                <div class="style3">
+                    جستجو در نوشته‌های وب‌گاه:&nbsp;
+                <input name="ctl00$search_text" type="text" maxlength="100" size="50" id="search_text" class="textBox">
+                    <span id="RequiredFieldValidator1" style="visibility:hidden;">*</span>
+                    <input type="image" name="ctl00$search_btn" id="search_btn" src="./معمای هشت وزیر - الگوریتمستان_files/google.jpg" alt="Google" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$search_btn&quot;, &quot;&quot;, true, &quot;vg3&quot;, &quot;&quot;, false, false))" style="width:50px;">
+                </div>
+            </div>
+            <div class="Clear">
+            </div>
+            <div>
+                <div class="style48" style="width: 204px">
+                    
+    <div class="MenuHeader">
+        امتیازهای نوشته
+    </div>
+    <div id="scores_scoreTotal">
+        <div class="style4">
+            تعداد:&nbsp;&nbsp;<b><span id="scores_scoresTotalCount">۸۷</span></b>
+            <br>
+            <br>
+            میانگین:&nbsp;&nbsp;<b><span id="scores_scoresTotalAve">۴.۳۶</span></b>&nbsp;&nbsp;از&nbsp;&nbsp;<b>۵.۰۰</b>
+        </div>
+    </div>
+    <div class="MenuHeader">
+        بازدیدهای نوشته
+    </div>
+    <div class="style5">
+        امروز:&nbsp;&nbsp;<b><span id="scores_statsToday">۱۵</span></b>&nbsp;بازدید
+        <br>
+        <br>
+        ۲۴ ساعت گذشته:&nbsp;&nbsp;<b><span id="scores_stats1Day">۲۰</span></b>&nbsp;بازدید
+        <br>
+        <br>
+        ۷ روز گذشته:&nbsp;&nbsp;<b><span id="scores_statsWeek">۱۰۲</span></b>&nbsp;بازدید
+        <br>
+        <br>
+        ۳۰ روز گذشته:&nbsp;&nbsp;<b><span id="scores_statsMonth">۵۷۲</span></b>&nbsp;بازدید
+    </div>
+
+                    <div class="MenuHeader">
+                        پیگیری نوشته‌ها
+                    </div>
+                    <div class="style510">
+                        
+                        <div id="SmallOne">
+                            <a href="https://telegram.me/algorithmha" target="_blank" title="الگوریتمستان در تلگرام">
+                                <img src="./معمای هشت وزیر - الگوریتمستان_files/telegram.gif" width="175px" alt="الگوریتمستان در تلگرام" title="Telegram">
+                            </a>
+                            <br>
+                            <br>
+                            
+                            <a href="https://www.google.com/+AlgorithmhaIrmap" target="_blank" title="Google Plus">
+                                <img alt="Google Plus" title="Google Plus" width="40px" src="./معمای هشت وزیر - الگوریتمستان_files/minigplus.jpg" class="NoBorder"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/algs_ir" target="_blank" title="Twitter">
+                                        <img alt="Twitter" width="40px" title="Twitter" src="./معمای هشت وزیر - الگوریتمستان_files/twitter-follow.jpg" class="NoBorder"></a>
+                            <br>
+                            <br>
+                            <a href="http://www.cloob.com/algorithmha" target="_blank" title="RSS Feed">
+                                <img alt="Cloob" title="Cloob" width="40px" src="./معمای هشت وزیر - الگوریتمستان_files/cloob-icon.jpg" class="NoBorder"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/algorithmha.ir" target="_blank" title="FaceBook">
+                                        <img alt="FaceBook" width="40px" title="FaceBook" src="http://www.algorithmha.ir/css/facebook-small.jpg" class="NoBorder" style="display: none !important;"></a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        
+    <div class="MenuHeader">
+        نوشته‌های به روز شده
+    </div>
+    
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/post-%D9%85%D8%B3%D8%A7%D9%84%D9%87-%D8%AD%D8%AF%D8%A7%DA%A9%D8%AB%D8%B1-%D9%85%D8%AC%D9%85%D9%88%D8%B9/" title="بررسی مسأله‌ی حداکثر مجموع، از سوالات آمادگی مسابقات برنامه‌نویسی">
+                        مسأله‌ی حداکثر مجموع
+                    </a>
+                </div>
+                <div class="style46">
+                    بررسی مسأله‌ی حداکثر مجموع، از سوالات آمادگی مسابقات برنامه‌نویسی
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D8%AC%D8%B3%D8%AA%D8%AC%D9%88%DB%8C-%D8%A7%D9%88%D9%84-%D8%B9%D9%85%D9%82-dfs/" title="معرفی الگوریتم جستجوی اول عمق (DFS) برای پیمایش گراف و کاربردهای آن به همراه قطعه کد به زبان برنامه‌نویسی ++C">
+                        الگوریتم جستجوی اول عمق (DFS)
+                    </a>
+                </div>
+                <div class="style46">
+                    معرفی الگوریتم جستجوی اول عمق (DFS) برای پیمایش گراف و کاربردهای آن به همراه قطعه کد به زبان برنامه‌نویسی ++C
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AF%D8%A7%DB%8C%DA%A9%D8%B3%D8%AA%D8%B1%D8%A7/" title="آشنایی با الگوریتم دایکسترا برای یافتن کوتاهترین مسیر تک‌مبدأ در گراف وزن‌دار بدون یال منفی با قطعه کد به زبان ++C">
+                        الگوریتم دایکسترا
+                    </a>
+                </div>
+                <div class="style46">
+                    آشنایی با الگوریتم دایکسترا برای یافتن کوتاهترین مسیر تک‌مبدأ در گراف وزن‌دار بدون یال منفی با قطعه کد به زبان ++C
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/post-%D9%85%D8%A8%D8%A7%D8%AD%D8%AB-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C-%D8%AF%D8%B1-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C/" title="عناوین بخشی از مباحث پرکاربرد در سوالات مسابقات برنامه‌نویسی ">
+                        مباحث کاربردی در مسابقات برنامه‌نویسی
+                    </a>
+                </div>
+                <div class="style46">
+                    عناوین بخشی از مباحث پرکاربرد در سوالات مسابقات برنامه‌نویسی 
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C/post-%D8%B6%D8%B1%D8%A8-%D8%B2%D9%86%D8%AC%DB%8C%D8%B1%D9%87-%D8%A7%DB%8C-%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3-%D9%87%D8%A7/" title="بحث در مورد ضرب زنجیره‌ای ماتریس‌ها و روش پیاده‌سازی الگوریتم پرانتزبندی بهینه‌ی آن با روش تقسیم و حل و روش برنامه‌نویسی پویا">
+                        ضرب زنجیره‌ای ماتریس‌ها
+                    </a>
+                </div>
+                <div class="style46">
+                    بحث در مورد ضرب زنجیره‌ای ماتریس‌ها و روش پیاده‌سازی الگوریتم پرانتزبندی بهینه‌ی آن با روش تقسیم و حل و روش برنامه‌نویسی پویا
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C/post-%D8%B6%D8%B1%D8%A8-%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%B3%D9%86/" title="آشنایی با الگوریتم استراسن برای محاسبه‌‌ی حاصلضرب ماتریس‌ها">
+                        ضرب استراسن
+                    </a>
+                </div>
+                <div class="style46">
+                    آشنایی با الگوریتم استراسن برای محاسبه‌‌ی حاصلضرب ماتریس‌ها
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%B3%DB%8C-%D9%BE%D9%84%D8%A7%D8%B3-%D9%BE%D9%84%D8%A7%D8%B3/post-%DA%A9%D9%84%D8%A7%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AD%D8%A7%D9%81%D8%B8%D9%87-%D8%AF%D8%B1-%D8%B3%DB%8C-%D9%BE%D9%84%D8%A7%D8%B3-%D9%BE%D9%84%D8%A7%D8%B3/" title="آشنایی با کلاس‌های حافظه و کاربرد آنها در زبان ++C">
+                        کلاس‌های حافظه در ++C
+                    </a>
+                </div>
+                <div class="style46">
+                    آشنایی با کلاس‌های حافظه و کاربرد آنها در زبان ++C
+                </div>
+            </div>
+        
+    <div class="style12">
+        نوشته‌های محبوب بازدیدکنندگان
+    </div>
+    
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C/post-%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87-%D9%81%DB%8C%D8%A8%D9%88%D9%86%D8%A7%DA%86%DB%8C/" title="بررسی الگوریتم‌های محاسبه‌ی دنباله‌ی اعداد فیبوناچی و کارایی آنها">
+                        دنباله‌ی اعداد فیبوناچی
+                    </a>
+                </div>
+                <div class="style46">
+                    بررسی الگوریتم‌های محاسبه‌ی دنباله‌ی اعداد فیبوناچی و کارایی آنها
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/post-%D9%85%D8%B3%D8%A7%D9%84%D9%87-simple-addition/" title="بررسی مسأله‌ی Simple Addition از سوالات آمادگی مسابقات برنامه‌نویسی">
+                        مسأله‌ی Simple Addition
+                    </a>
+                </div>
+                <div class="style46">
+                    بررسی مسأله‌ی Simple Addition از سوالات آمادگی مسابقات برنامه‌نویسی
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AF%D8%A7%DB%8C%DA%A9%D8%B3%D8%AA%D8%B1%D8%A7/" title="آشنایی با الگوریتم دایکسترا برای یافتن کوتاهترین مسیر تک‌مبدأ در گراف وزن‌دار بدون یال منفی با قطعه کد به زبان ++C">
+                        الگوریتم دایکسترا
+                    </a>
+                </div>
+                <div class="style46">
+                    آشنایی با الگوریتم دایکسترا برای یافتن کوتاهترین مسیر تک‌مبدأ در گراف وزن‌دار بدون یال منفی با قطعه کد به زبان ++C
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%B3%DB%8C-%D9%BE%D9%84%D8%A7%D8%B3-%D9%BE%D9%84%D8%A7%D8%B3/post-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%D8%AC%D8%B9-%D8%AF%D8%B1-%D8%B3%DB%8C-%D9%BE%D9%84%D8%A7%D8%B3-%D9%BE%D9%84%D8%A7%D8%B3/" title="معرفی متغیرهای مرجع در زبان برنامه‌نویسی ++C و آشنایی با مهمترین کاربردهای آنها">
+                        متغیرهای مرجع در ++C
+                    </a>
+                </div>
+                <div class="style46">
+                    معرفی متغیرهای مرجع در زبان برنامه‌نویسی ++C و آشنایی با مهمترین کاربردهای آنها
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D8%B1%D9%88%D8%B4-%D8%AD%D8%B1%DB%8C%D8%B5%D8%A7%D9%86%D9%87/" title="آشنایی با روش حریصانه و کاربردهای آن مانند مسأله‌ی خرد کردن پول">
+                        روش حریصانه
+                    </a>
+                </div>
+                <div class="style46">
+                    آشنایی با روش حریصانه و کاربردهای آن مانند مسأله‌ی خرد کردن پول
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%DA%A9%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C/post-%DA%A9%D8%AA%D8%A7%D8%A8-art-of-programming-contest/" title="معرفی کتاب Art of Programming Contest برای علاقه‌مندان حل سوالات الگوریتمی و شرکت‌کنندگان مسابقات برنامه‌نویسی با قابلیت دانلود نسخه‌ی الکترونیکی">
+                        کتاب هنر مسابقات برنامه‌نویسی
+                    </a>
+                </div>
+                <div class="style46">
+                    معرفی کتاب Art of Programming Contest برای علاقه‌مندان حل سوالات الگوریتمی و شرکت‌کنندگان مسابقات برنامه‌نویسی با قابلیت دانلود نسخه‌ی الکترونیکی
+                </div>
+            </div>
+        
+            <div class="style29">
+                <div class="PostIntroHeader">
+                    »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B3%D8%A7%D9%84%D9%87-%DA%A9%D8%A7%D8%B4%DB%8C%DA%A9%D8%A7%D8%B1%DB%8C/" title="بحث در مورد مسأله‌ی کاشیکاری یا فرش کردن زمین با موزاییک به روش تقسیم و حل">
+                        مسأله‌ی کاشیکاری
+                    </a>
+                </div>
+                <div class="style46">
+                    بحث در مورد مسأله‌ی کاشیکاری یا فرش کردن زمین با موزاییک به روش تقسیم و حل
+                </div>
+            </div>
+        
+    <div id="SideMaster_nrelateds">
+        <div class="style12">
+            نوشته‌ها از این دسته
+        </div>
+        
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85-%D8%AF%D8%A7%DB%8C%DA%A9%D8%B3%D8%AA%D8%B1%D8%A7/" title="آشنایی با الگوریتم دایکسترا برای یافتن کوتاهترین مسیر تک‌مبدأ در گراف وزن‌دار بدون یال منفی با قطعه کد به زبان ++C">
+                            الگوریتم دایکسترا
+                        </a>
+                    </div>
+                    <div class="style46">
+                        آشنایی با الگوریتم دایکسترا برای یافتن کوتاهترین مسیر تک‌مبدأ در گراف وزن‌دار بدون یال منفی با قطعه کد به زبان ++C
+                    </div>
+                </div>
+            
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C/post-%D8%B6%D8%B1%D8%A8-%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%B3%D9%86/" title="آشنایی با الگوریتم استراسن برای محاسبه‌‌ی حاصلضرب ماتریس‌ها">
+                            ضرب استراسن
+                        </a>
+                    </div>
+                    <div class="style46">
+                        آشنایی با الگوریتم استراسن برای محاسبه‌‌ی حاصلضرب ماتریس‌ها
+                    </div>
+                </div>
+            
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D9%BE%D9%88%DB%8C%D8%A7/" title="آشنایی با روش برنامه‌نویسی پویا (یا برنامه‌ریزی پویا - Dynamic Programming) به عنوان یکی از روش‌های پر کاربرد طراحی الگوریتم برای حل بهینه‌ی مسائل با مثالی از محاسبه‌ی دنباله‌ی فیبوناچی">
+                            روش برنامه‌نویسی پویا
+                        </a>
+                    </div>
+                    <div class="style46">
+                        آشنایی با روش برنامه‌نویسی پویا (یا برنامه‌ریزی پویا - Dynamic Programming) به عنوان یکی از روش‌های پر کاربرد طراحی الگوریتم برای حل بهینه‌ی مسائل با مثالی از محاسبه‌ی دنباله‌ی فیبوناچی
+                    </div>
+                </div>
+            
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/post-%D9%85%D8%B1%D8%AA%D8%A8-%D8%B3%D8%A7%D8%B2%DB%8C-%D8%AF%D8%B1%D8%AC%DB%8C/" title="آشنایی با روش مرتب‌سازی درجی، همراه با قطعه کد به زبان برنامه‌نویسی ++C">
+                            مرتب‌سازی درجی
+                        </a>
+                    </div>
+                    <div class="style46">
+                        آشنایی با روش مرتب‌سازی درجی، همراه با قطعه کد به زبان برنامه‌نویسی ++C
+                    </div>
+                </div>
+            
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/post-%D9%85%D8%B3%D8%A7%D9%84%D9%87-%D8%AF%D9%88%D8%B3%D8%AA%D8%A7%D9%86-%D8%AE%D9%88%D8%A8/" title="بررسی مسأله‌ی دوستان خوب، از سوالات مسابقات برنامه‌نویسی ACM">
+                            مسأله‌ی دوستان خوب
+                        </a>
+                    </div>
+                    <div class="style46">
+                        بررسی مسأله‌ی دوستان خوب، از سوالات مسابقات برنامه‌نویسی ACM
+                    </div>
+                </div>
+            
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C/post-%D8%B6%D8%B1%D8%A8-%D8%B2%D9%86%D8%AC%DB%8C%D8%B1%D9%87-%D8%A7%DB%8C-%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3-%D9%87%D8%A7/" title="بحث در مورد ضرب زنجیره‌ای ماتریس‌ها و روش پیاده‌سازی الگوریتم پرانتزبندی بهینه‌ی آن با روش تقسیم و حل و روش برنامه‌نویسی پویا">
+                            ضرب زنجیره‌ای ماتریس‌ها
+                        </a>
+                    </div>
+                    <div class="style46">
+                        بحث در مورد ضرب زنجیره‌ای ماتریس‌ها و روش پیاده‌سازی الگوریتم پرانتزبندی بهینه‌ی آن با روش تقسیم و حل و روش برنامه‌نویسی پویا
+                    </div>
+                </div>
+            
+                <div class="style29">
+                    <div class="PostIntroHeader">
+                        »&nbsp; <a target="_self" href="http://www.algorithmha.ir/category-%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/post-%D9%85%D8%B3%D8%A7%D9%84%D9%87-simple-addition/" title="بررسی مسأله‌ی Simple Addition از سوالات آمادگی مسابقات برنامه‌نویسی">
+                            مسأله‌ی Simple Addition
+                        </a>
+                    </div>
+                    <div class="style46">
+                        بررسی مسأله‌ی Simple Addition از سوالات آمادگی مسابقات برنامه‌نویسی
+                    </div>
+                </div>
+            
+    </div>
+
+                    </div>
+                    <br>
+                </div>
+                <div class="style49" style="width: 770px">
+                    
+    <script src="./معمای هشت وزیر - الگوریتمستان_files/click.js" type="text/javascript" language="javascript">
+    </script>
+    <span class="makeinvisible" itemprop="name">
+        معمای هشت وزیر - الگوریتمستان
+    </span>
+    <div class="PostBody" itemscope="" itemtype="http://schema.org/BlogPosting" style="line-height: 250%">
+        <span class="makeinvisible">
+            <meta itemprop="thumbnailUrl" content="http://www.algorithmha.ir/css/algorithms.jpg">
+            <img itemprop="image" src="./معمای هشت وزیر - الگوریتمستان_files/algorithms.jpg" alt="الگوریتمستان" title="الگوریتمستان">
+        </span>
+        <div class="makeinvisible" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+            <span id="PostMaster_hscoresCount" class="makeinvisible" itemprop="ratingCount">87</span><span id="PostMaster_worstScore" class="makeinvisible" itemprop="worstRating">1</span><span id="PostMaster_hscoresAve" class="makeinvisible" itemprop="ratingValue">4.36</span><span class="makeinvisible" itemprop="bestRating">5.00</span>
+        </div>
+        <div class="style30">
+            &nbsp;&nbsp;»&nbsp;&nbsp;<h1 class="font14pt">
+                <a target="_self" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/" title="بررسی معمای هشت وزیر یا n وزیر و راهبرد عقبگرد برای حل مسأله" id="معمای_هشت_وزیر" itemprop="url">
+                    <span itemprop="name headline">
+                        معمای هشت وزیر
+                    </span></a>
+            </h1>
+            <br>
+            <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <h2 itemprop="description" class="font8pt">
+                    بررسی معمای هشت وزیر یا n وزیر و راهبرد عقبگرد برای حل مسأله</h2>
+            </div>
+        </div>
+        <div id="PostMaster_IsEdited">
+            <div class="style31">
+                <div class="style32">
+                    <img class="blackBorder" src="./معمای هشت وزیر - الگوریتمستان_files/aachp.jpg" alt="http://www.aachp.ir" title="برنامه‌نویسی و طراحی الگوریتم">
+                </div>
+                <div class="style33">
+                    آنچه می‌خوانید ویراست جدید نوشته‌ای است که اولین بار با عنوان «<b>مساله هشت وزیر</b>»
+                    آذر ماه 1386
+                    از طریق <b>وب‌گاه برنامه‌نویسی و طراحی الگوریتم</b> (عنوان و طرح پیشین وب‌گاه الگوریتمستان)
+                    منتشر شده بود.
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id="PostMaster_tableOfContents">
+            <div class="style57">
+                <div class="style58">آنچه در این نوشته می‌خوانید:</div>
+                <div id="PostMaster_parts">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;<a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/#معمای_هشت_وزیر">معمای هشت وزیر</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;<a title=" برای افرادی که با بازی شطرنج آشنایی ندارند" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/#برای_افرادی_که_با_بازی_شطرنج_آشنایی_ندارند">برای افرادی که با بازی شطرنج آشنایی ندارند</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;<a title=" معمای n وزیر" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/#معمای_n_وزیر">معمای n وزیر</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;<a title=" روش عقبگرد" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/#روش_عقبگرد">روش عقبگرد</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;<a title=" پیاده‌سازی مسأله" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/#پیاده_سازی_مسأله">پیاده‌سازی مسأله</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;<a title=" روش‌های دیگر حل مسأله" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/#روش_های_دیگر_حل_مسأله">روش‌های دیگر حل مسأله</a><br>
+</div>
+            </div>
+            <div class="Clear"></div>
+        </div>
+        <div class="PostText" itemprop="ArticleBody">
+            <p class="rtljustify">معمای هشت وزیر از جمله مسائل کلاسیک مباحث طراحی الگوریتم است که در حالت کلی‌تر با عنوان معمای<span class="TimesFont"> n </span>وزیر یا معمای چند وزیر مطرح می‌شود.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;<b></b> </p>
+<p class="rtljustify"><b></b></p><h2 id="برای_افرادی_که_با_بازی_شطرنج_آشنایی_ندارند" class="font14pt"><b>برای افرادی که با بازی شطرنج آشنایی ندارند</b></h2><p></p>
+<p class="rtljustify">وزیر مهره‌ای از مهره‌های بازی شطرنج است که می‌تواند در تمامی هشت جهت به هر تعداد خانه - تا زمانی که مهره‌ای مانع نباشد - حرکت کند. اگر در این مسیرها مهره‌ای از حریف قرار گرفته باشد، آن مهره در معرض خطر حمله توسط وزیر قرار دارد؛ یا به اصطلاح وزیر آن مهره را تهدید می‌کند.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtlcenter"><a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/"><img class="NoBorder" alt="معمای هشت وزیر" src="./معمای هشت وزیر - الگوریتمستان_files/034_1.jpg"></a></p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify"><b></b></p><h2 id="معمای_n_وزیر" class="font14pt"><b>معمای<span class="TimesFont"> n </span>وزیر</b></h2><p></p>
+<p class="rtljustify">هدف از مسأله‌ی هشت وزیر، چیدن<span class="TimesFont"> 8 </span>مهره‌ی وزیر روی یک صفحه‌ی شطرنج خالی است، به قسمی که هیچ مهره‌ای مهره‌های دیگر را تهدید نکند. به عبارت دیگر،<span class="TimesFont"> 8 </span>وزیر باید به نحوی چیده شوند که هیچ‌کدام در بک سطر، بک ستون یا بک قطر قرار نداشته باشند. یک جواب مسأله می‌تواند به صورت زیر باشد:</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtlcenter"><a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/"><img class="NoBorder" alt="مسأله‌ی هشت وزیر" src="./معمای هشت وزیر - الگوریتمستان_files/034_2.jpg"></a></p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;در حالت کلی به جای عدد<span class="TimesFont"> 8 </span>از عدد طبیعی<span class="TimesFont"> n </span>استفاده شده و مسأله به ازای هر<span class="TimesFont"> n </span>بزرگتر یا مساوی<span class="TimesFont"> 4 </span>مورد بررسی قرار می‌گیرد. به این ترتیب، هدف مسأله چیدن<span class="TimesFont"> n </span>مهره وزیر در یک صفحه شطرنج با ابعاد<span class="TimesFont"> n x n </span>است.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;در یک صفحه‌ی<span class="TimesFont"> n </span>در<span class="TimesFont"> n </span>تعداد<span class="TimesFont"> n</span><sup><span class="TimesFont">2</span></sup> خانه وجود دارد که از بین آنها<span class="TimesFont"> n </span>خانه برای قرار گرفتن<span class="TimesFont"> n </span>وزیر انتخاب می‌شود. در این انتخاب‌ها ترتیب اهمیتی ندارد. پس تعداد حالت‌های انتخاب<span class="TimesFont"> n </span>خانه برای چیدن<span class="TimesFont"> n </span>وزیر <a href="http://www.algorithmha.ir/category-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C/post-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%87-%D8%B6%D8%B1%DB%8C%D8%A8-%D8%AF%D9%88-%D8%AC%D9%85%D9%84%D9%87-%D8%A7%DB%8C/" target="_blank">ترکیب</a><span class="TimesFont"> n </span>از<span class="TimesFont"> n</span><sup><span class="TimesFont">2</span></sup> یا<span class="TimesFont"> ( C( n</span><sup><span class="TimesFont">2</span></sup><span class="TimesFont">, n </span>است که حتی برای<span class="TimesFont"> n</span>‌های نه چندان بزرگ (نظیر<span class="TimesFont"> 8) </span>عدد بزرگی به دست می‌آید. در نتیجه بررسی تمامی حالات ممکن چینش مهره‌ها برای رسیدن به چیدمان صحیح به هیچ عنوان مقرون به صرفه نیست. از سوی دیگر به ازای هر<span class="TimesFont"> n</span>، تنها یک جواب منحصربفرد وجود ندارد. بنابراین اگر هدف مسأله یافتن تمامی جواب‌های ممکن باشد، استفاده از روش‌های هوشمند تکاملی یا الگوریتم‌های جستجوی تصادفی، لزوما ما را به نتیجه‌ی مطلوب نمی‌رساند.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;<b></b> </p>
+<p class="rtljustify"><b></b></p><h2 id="روش_عقبگرد" class="font14pt"><b>روش عقبگرد</b></h2><p></p>
+<p class="rtljustify">یکی از روش‌های حل این مسأله، استفاده از راهبرد عقبگرد است. در این روش تمام فضای مسأله به صورت یک درخت در نظر گرفته می‌شود که سطح<span class="TimesFont"> i</span>ام شامل تمام انتخاب‌های مهره‌ی<span class="TimesFont"> i</span>‌ام است. با توجه شرایط مسأله در هر سطر از صفحه‌ی شطرنج تنها یک مهره می‌تواند قرار بگیرد. به این ترتیب سطح شماره‌ی<span class="TimesFont"> i</span>، محل مهره<span class="TimesFont"> i</span>ام در سطر شماره‌ی<span class="TimesFont"> i </span>صفحه‌ی شطرنج را مشخص می‌کند. قسمتی از چنین درختی به ازای<span class="TimesFont"> n = 4 </span>به این صورت خواهد شد:</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtlcenter"><a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/"><img class="NoBorder" alt="معمای 8 وزیر" src="./معمای هشت وزیر - الگوریتمستان_files/034_3.jpg"></a></p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;پیمایش پیشوندی<span class="TimesFont"> (PreOrder) </span>چنین درختی تمام حالت‌های فضای مسأله را برای یافتن پاسخ جستجو می‌کند. اما حین پیمایش می‌توان از پیمایش گره‌های غیرامیدبخش صرف‌تظر کرد. گره‌های غیرامیدبخش گره‌هایی هستند که بر اساس تعاریف مسأله می‌توان مطمئن بود هرگز به جواب درست نمی‌رسد. به عنوان مثال، اگر با گره<span class="TimesFont"> 1 </span>در سطح یک شروع کرده و به گره<span class="TimesFont"> 1 </span>در سطح دو برویم، این گره امیدبخش نیست. چرا که دو مهره اول در ستون شماره یک چیده شده‌اند و یکدیگر را تهدید می‌کنند. این اتفاق مستقل از این که مهره‌های بعدی در چه محل‌هایی قرار بگیرد مطمئنا به جواب صحیح ختم نمی‌شود. در نتیجه از پیمایش فرزندان گره شماره‌ی<span class="TimesFont"> 1 </span>در سطح دوم صرف نظر کرده و روال را با فرزند بعدی گره والد آن - یعنی گره شماره‌ی<span class="TimesFont"> 2 </span>در سطح دوم - ادامه می‌دهیم. به همین ترتیب این گره نیز امیدبخش نیست. چرا که در چنین حالتی مهره در ستون شماره‌ی<span class="TimesFont"> 2 </span>از سطر دوم قرار می‌گیرد که با وزیر سطر اول و ستون<span class="TimesFont"> 1 </span>در یک قطر قرار دارند.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;چنین پیمایشی معادل این است که از بالای صفحه‌ی شطرنج (سطر اول) شروع کرده و مهره را در ستون شماره‌ی<span class="TimesFont"> 1 </span>قرار بدهیم. اگر چینش این مهره با مهره‌های بالاتر تهدیدی ایجاد نکند، چینش مهره‌ی بعدی در سطر بعدی را با همین روش ادامه می‌دهیم. اما اگر تهدیدی اتفاق بیفتد، مهره را یک خانه به سمت راست جابجا می‌کنیم. اگر مهره به انتهای سطر رسیده باشد، آن مهره را برداشته و مهره‌ی سطر بالاتر را یک خانه به سمت راست جابجا می‌کنیم. اگر حین پیش‌روی سطرها به سمت پایین، به انتهای صفحه برسیم، یک جواب از مسأله تولید شده است. </p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtlcenter"><a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/"><img class="NoBorder" alt="انیمیشن معمای 8 وزیر" src="./معمای هشت وزیر - الگوریتمستان_files/034_4.gif"></a></p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify"><b></b></p><h2 id="پیاده_سازی_مسأله" class="font14pt"><b>پیاده‌سازی مسأله</b></h2><p></p>
+<p class="rtljustify">یکی از مهم‌ترین بخش‌های پیاده‌سازی مسأله‌ی<span class="TimesFont"> 8 </span>وزیر، روش بررسی تهدید مهره‌ها است.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;یک روش این است که یک آرایه دو بعدی<span class="TimesFont"> n </span>در<span class="TimesFont"> n </span>به عنوان صفحه‌ی شطرنج تعریف شود. با مشخص شدن محل هر مهره، تمام خانه‌هایی که توسط آن تهدید می‌شوند علامت‌گذاری می‌شود، تا بررسی غیرامن بودن آنها در مراحل بعدی آسان باشد. این روش در ابتدا بدون مشکل به نظر می‌رسد. اما سوای بحث مصرف حافظه، یک مشکل اساسی دیگر نیز وجود دارد. زمانی که تشخیص می‌دهیم فرزندان یک گره همه غیرامیدبخش هستند، از آن گره صرف نظر کرده و به گره بعدی فرزند والد مراجعه می‌کنیم. در نتیجه باید محل مهره در آن سطر جابجا شده و محل‌های غیرامنی که علامت‌گذاری شده بودند به حالت قبل از علامت‌گذاری بازگردند. اما مسأله اینجاست که محل‌های علامت‌گذاری شده پس از جابجایی لزوما امن نمی‌شوند. ممکن است همچنان توسط مهره دیگری تهدید وجود داشته باشد. تشخیص این مسأله که آیا آن محل به صورت امن مشخص شود یا نه، زمان مصرفی الگوریتم را دو چندان می‌کند.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;در روش دوم، تنها محل قرار گرفتن هر مهره به صورت شماره‌ی سطر و ستون ذخیره می‌شود. این ذخیره‌سازی می‌تواند در یک آرایه‌ی یک بعدی باشد. به این ترتیب که شماره‌ی اندیس آرایه، شماره‌ی سطر مهره را مشخص کرده و مقدار آن، شماره‌ی ستون مهره باشد. مثلا اگر مقدار اندیس شماره‌ی<span class="TimesFont"> 1 </span>آرایه<span class="TimesFont"> 4 </span>باشد، یعنی وزیر سطر اول در خانه‌ی چهارم قرار دارد. پس از این تعریف، با مشخص شدن محل یک مهره‌ی جدید، خانه‌هایی که ممکن است این خانه را تهدید کنند بررسی می‌شوند، تا امن بودن آن مشخص شود. مزیت این روش به روش قبلی - علاوه بر مصرف کمتر حافظه - رفع مشکل بررسی محل‌های علامت‌گذاری شده است.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;برای بررسی این مسأله که آیا محل مهره‌ی جدید تهدیدی ایجاد می‌کند یا نه، به جای بررسی تک‌تک خانه‌های ستونی و قطری، از روابط ریاضی استفاده می‌شود. یافتن پاسخ این سوال که آیا در ستونی که مهره قرار دارد، قبلا مهره‌ای قرار داده شده است یا نه، کار چندان دشواری نیست. کافی است یک آرایه‌ی یک بعدی به طول<span class="TimesFont"> n </span>تعریف شده و هرگاه مهره‌ای در یک ستون مستقر شد، شماره‌ی ستون آن در آرایه به عنوان غیرامن علامتگذاری شود. دز نتیجه مثلا اگر مهره‌ی جدید در ستون شماره‌ی<span class="TimesFont"> 3 </span>قرار گرفت، کافی است اندیس شماره‌ی<span class="TimesFont"> 3 </span>این آرایه برای اطمینان از امن بودن این ستون بررسی شود.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;در مورد دو قطر راست و چپ موضوع کمی پیچیده به نظر می‌رسد. اما با کمی دقت، یک رابطه‌ی ثابت ریاضی برای هر یک از قطرها وجود دارد. مثلا تفاضل شماره‌ی ستون از شماره‌ی سطر تمامی خانه‌های روی قطر اصلی صفحه صفر است. یا مجموع شماره‌ی سطر و ستون تمامی خانه‌های قطر فرعی صفحه عدد<span class="TimesFont"> 9 </span>است. به همین ترتیب سایر قطرها نیز رابطه‌ی ریاضی مشابه دارند. در نتیجه مثلا اگر مهره‌ی جدید در سطر سوم و ستون دوم قرار گرفته باشد، تنها کافی است در مهره‌های چیده شده‌ی قبلی دنبال مهره‌ای باشیم که تفاضل ستون از سطر آن عدد<span class="TimesFont"> 1</span>، یا مجموع آنها عدد<span class="TimesFont"> 5 </span>باشد. اگر چنین مهره‌ای یافت نشد، تهدیدی از طرف قطرها وجود ندارد. راه بهتر آن است که آرایه‌ای به طول<span class="TimesFont"> 2n - 1 </span>برای دو قطر راست و چپ تعریف کرده و اگر مهره‌ای در یک قطر مستقر شد، آن قطر به عنوان قطر ناامن در آرایه علامتگذاری شود. در مرحله‌ی بعدی با قرار گرفتن هر مهره‌ی جدید، به جای بررسی تمام خانه‌های مهره‌های قبلی، این دو آرایه بررسی شوند. چنین آرایه‌هایی بر خلاف روش علامت‌گذاری قبلی، مشکل حذف علامت‌ها را ندارد (چرا؟).</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtlcenter"><a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/"><img class="NoBorder" alt="مسأله‌ی هشت وزیر" src="./معمای هشت وزیر - الگوریتمستان_files/034_5.jpg"></a></p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtlcenter"><a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/"><img class="NoBorder" alt="معمای هشت وزیر" src="./معمای هشت وزیر - الگوریتمستان_files/034_6.jpg"></a></p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;<b>نکته:</b> با توجه به اینکه در قسمت پایین قطر اصلی تفاضل شماره‌ی ستون از شماره‌ی سطر عدد منفی می‌شود، برای حفظ استاندارد شروع از یک، آن را با عدد<span class="TimesFont"> n </span>جمع می‌زنند. همینطور در مورد مجموع شماره‌ی سطر و ستون، عدد یک کسر می‌شود. </p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="rtljustify"><b></b></p><h2 id="روش_های_دیگر_حل_مسأله" class="font14pt"><b>روش‌های دیگر حل مسأله</b></h2><p></p>
+<p class="rtljustify">همانگونه که عنوان شد، روش عقبگرد تمامی جواب‌های مسأله را تولید کرده و با صرف نظر کردن از گره‌های غیرامیدبخش بهینگی قابل توجهی در زمان اجرای الگوریتم ایجاد می‌کند. اما با افزایش مقدار<span class="TimesFont"> n </span>و افزایش عمق درخت و تعداد فرزندان هر گره، سرعت اجرا نیز به صورت شبه‌نمایی افزایش یافته و کارایی روش پایین می‌آید.</p>
+<p class="rtljustify">&nbsp;&nbsp;&nbsp;&nbsp;اگر هدف از حل مسأله تنها رسیدن به یک جواب باشد، روش‌های دیگری وجود دارد که کارایی بهتری دارند. این روش‌ها عموما از چیدمان تصادفی یا شبه‌تصادفی (تصادفی هوشمند) برای رسیدن به یک جواب استفاده می‌کنند. اکثر الگوریتم‌های مکاشفه‌ای و فرا مکاشفه‌ای - مانند الگوریتم تکاملی ژنتیک - در این حالت جوابگوی نیازها هستند.</p>
+        </div>
+        <br>
+        <div class="PostFooter">
+            &nbsp;»&nbsp;&nbsp;&nbsp; ارسال شده در تاریخ&nbsp;<b>
+                <time datetime="2012-03-27T11:12" itemprop="datePublished">سه‌شنبه، ۸ فروردین ماه ۱۳۹۱</time>
+            </b>&nbsp;توسط&nbsp;<span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="http://www.aghdasifam.ir/" itemprop="url" title="مسعود اقدسی‌فام" target="_blank" rel="author">مسعود اقدسی‌فام</a></span></span>
+        </div>
+        <div id="PostMaster_msgs" class="style34">
+            <div id="PostMaster_IsReviewed">
+                این نوشته آخرین بار در تاریخ <b>
+                    جمعه، ۲۰ آذر ماه ۱۳۹۴</b> مورد بازنویسی نگارشی
+                قرار گرفته است.
+            </div>
+            
+            
+        </div>
+    </div>
+    <div id="PostMaster_ReadMore">
+        <div class="PostHeader">
+            پیوندها برای مطالعه‌ی بیشتر
+        </div>
+        <div class="style35">
+            <p dir="rtl" align="justify">•&nbsp;&nbsp;&nbsp;<a href="http://fa.wikipedia.org/wiki/%D9%85%D8%B3%D8%A6%D9%84%D9%87_%DA%86%D9%86%D8%AF_%D9%88%D8%B2%DB%8C%D8%B1" target="_blank">مسئله چند وزیر - ویکی‌پدیا، دانشنامهٔ آزاد</a></p>
+<p dir="ltr" align="justify">•&nbsp;&nbsp;&nbsp;<a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle" target="_blank">Eight queens puzzle - Wikipedia, the free encyclopedia</a></p>
+<p dir="ltr" align="justify">•&nbsp;&nbsp;&nbsp;<a href="http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/" target="_blank">N Queen Problem - GeeksforGeeks</a></p>
+
+        </div>
+    </div>
+    <div id="PostMaster_vote">
+        <div class="PostHeader">
+            امتیاز نوشته
+        </div>
+        <div class="style41">
+            <span title="نظری ندارم"><input id="PostMaster_scoreNone" type="radio" name="ctl00$PostMaster$scores" value="scoreNone" checked="checked"><label for="PostMaster_scoreNone">نظری ندارم</label></span>
+            <span title="1"><input id="PostMaster_score1" type="radio" name="ctl00$PostMaster$scores" value="score1"></span>
+            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-1.gif" title="1" class="NoBorder" alt="1">
+            <span title="2"><input id="PostMaster_score2" type="radio" name="ctl00$PostMaster$scores" value="score2"></span>
+            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-2.gif" title="2" class="NoBorder" alt="2">
+            <span title="3"><input id="PostMaster_score3" type="radio" name="ctl00$PostMaster$scores" value="score3"></span>
+            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-3.gif" title="3" class="NoBorder" alt="3">
+            <span title="4"><input id="PostMaster_score4" type="radio" name="ctl00$PostMaster$scores" value="score4"></span>
+            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-4.gif" title="4" class="NoBorder" alt="4">
+            <span title="5"><input id="PostMaster_score5" type="radio" name="ctl00$PostMaster$scores" value="score5"></span>
+            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-5.gif" title="5" class="NoBorder" alt="5">
+            <input type="submit" name="ctl00$PostMaster$SendScore" value="ثبت" onclick="return checkValidation(false);" id="PostMaster_SendScore" class="ctrl" style="font-family:Tahoma;font-size:10px;">
+        </div>
+    </div>
+    <div id="PostMaster_relateds">
+        <div class="PostHeader">
+            نوشته‌های مرتبط
+        </div>
+        <div class="style36">
+            <table id="PostMaster_rptRelateds" cellspacing="5">
+	<tbody><tr>
+		<td valign="top">
+                    <div class="style37">
+                        <div class="style38">
+                            •&nbsp;&nbsp;<a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D8%A8%D8%B1%D8%AC-%D9%87%D8%A7%D9%86%D9%88%DB%8C/" title="بررسی مسأله‌ی برج هانوی و روش‌های حل بازگشتی و غیربازگشتی آن">
+                                برج هانوی
+                            </a>
+                        </div>
+                        <div class="style39">
+                            بررسی مسأله‌ی برج هانوی و روش‌های حل بازگشتی و غیربازگشتی آن
+                        </div>
+                    </div>
+                </td><td valign="top">
+                    <div class="style37">
+                        <div class="style38">
+                            •&nbsp;&nbsp;<a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B3%D8%A7%D9%84%D9%87-%DA%A9%D8%A7%D8%B4%DB%8C%DA%A9%D8%A7%D8%B1%DB%8C/" title="بحث در مورد مسأله‌ی کاشیکاری یا فرش کردن زمین با موزاییک به روش تقسیم و حل">
+                                مسأله‌ی کاشیکاری
+                            </a>
+                        </div>
+                        <div class="style39">
+                            بحث در مورد مسأله‌ی کاشیکاری یا فرش کردن زمین با موزاییک به روش تقسیم و حل
+                        </div>
+                    </div>
+                </td>
+	</tr>
+</tbody></table>
+        </div>
+    </div>
+    <div class="PostHeader">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr>
+                <td>پیوند کوتاه صفحه
+                </td>
+                <td style="width: 50%">تأیید و پیشنهاد نوشته
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <div class="style40">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr>
+                <td class="ltrcenter">
+                    <span class="font14pt"><span class="TimesFont"><a href="http://www.algs.ir/spzq5f2/" title="معمای هشت وزیر - الگوریتمستان">
+                        www.algs.ir/spzq5f2/</a> </span></span>
+                </td>
+                <td style="width: 50%" class="ltrcenter">
+                    <div class="g-plusone" data-size="small" data-annotation="inline" data-width="250">
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <div class="PostHeader">
+        به اشتراک‌گذاری نوشته
+    </div>
+    <div class="style41">
+        <div class="Clear">
+        </div>
+        <div class="floatleft">
+            <div class="ltrcenter" style="width: 400px;">
+                <a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.algs.ir/spzq5f2/&amp;title=معمای هشت وزیر - الگوریتمستان&quot;);">
+                    <img src="http://www.algorithmha.ir/css/ico_linkedin.jpg" alt="اشتراک‌گذاری در LinkedIn" title="اشتراک‌گذاری در LinkedIn" class="NoBorder" style="display: none !important;">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;https://telegram.me/share/url?url=http://www.algs.ir/spzq5f2/&quot;);">
+                    <img src="./معمای هشت وزیر - الگوریتمستان_files/ico_telegram.jpg" alt="ارسال با Telegram" title="ارسال با Telegram" class="NoBorder">
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;https://www.twitter.com/intent/tweet?text=معمای هشت وزیر - %23الگوریتمستان - @algs_ir&amp;url=http://www.algs.ir/spzq5f2/&amp;original_referer=http://www.algs.ir/spzq5f2/&quot;);" title="Twitter">
+                    <img src="http://www.algorithmha.ir/css/ico_twitter.jpg" alt="اشتراک‌گذاری در Twitter" title="اشتراک‌گذاری در Twitter" class="NoBorder" style="display: none !important;">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;https://www.facebook.com/sharer/sharer.php?u=http://www.algorithmha.ir/category-چالش-الگوریتمی/post-معمای-هشت-وزیر/&quot;);" title="Facebook">
+                    <img src="http://www.algorithmha.ir/css/ico_fb.jpg" alt="اشتراک‌گذاری در Facebook" title="اشتراک‌گذاری در Facebook" class="NoBorder" style="display: none !important;">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                              <a target="_blank" rel="nofollow" href="https://plus.google.com/share?url=http://www.algs.ir/spzq5f2/&amp;title=%D9%85%D8%B9%D9%85%D8%A7%DB%8C%20%D9%87%D8%B4%D8%AA%20%D9%88%D8%B2%DB%8C%D8%B1%20-%20%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%D8%B3%D8%AA%D8%A7%D9%86%22);">
+                                                  <img src="http://www.algorithmha.ir/css/ico_google.jpg" alt="Google Plus" title="Google Plus" class="NoBorder" style="display: none !important;">
+                                              </a>
+                <br>
+                <br>
+                <a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;http://facenama.com/links/?url=http://www.algs.ir/spzq5f2/&quot;);">
+                    <img src="./معمای هشت وزیر - الگوریتمستان_files/ico_facenama.jpg" alt="اشتراک‌گذاری در فیس‌نما" title="اشتراک‌گذاری در فیس‌نما" class="NoBorder">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;mailto:yourecipient?&amp;body=http://www.algs.ir/spzq5f2/&amp;subject=معمای هشت وزیر - الگوریتمستان&quot;);">
+                    <img src="./معمای هشت وزیر - الگوریتمستان_files/ico_mail.jpg" alt="ارسال با پست الکترونیک" title="ارسال با پست الکترونیک" class="NoBorder">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;http://www.digg.com/submit?url=http://www.algs.ir/spzq5f2/&quot;);">
+                    <img src="http://www.algorithmha.ir/css/ico_digg.jpg" alt="اشتراک‌گذاری در Digg" title="اشتراک‌گذاری در Digg" class="NoBorder" style="display: none !important;">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;http://www.cloob.com/share/link/add?url=http://www.algorithmha.ir/category-چالش-الگوریتمی/post-معمای-هشت-وزیر/&amp;title=معمای هشت وزیر - الگوریتمستان&quot;);">
+                    <img src="./معمای هشت وزیر - الگوریتمستان_files/ico_cloob.jpg" alt="Cloob" title="Cloob" class="NoBorder">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="javascript:void(0)" onclick="openwindow(&quot;http://www.stumbleupon.com/submit?url=http://www.algs.ir/spzq5f2/&quot;);">
+                    <img src="./معمای هشت وزیر - الگوریتمستان_files/ico_so.jpg" alt="اشتراک‌گذاری در StumbleUpon" title="اشتراک‌گذاری در StumbleUpon" class="NoBorder">
+                </a>
+            </div>
+        </div>
+        <div class="floatright">
+            <div class="ltr" style="width: 300px;">
+                <img src="./معمای هشت وزیر - الگوریتمستان_files/spzq5f2.qr" alt="QR-Code صفحه" title="QR-Code صفحه">
+            </div>
+        </div>
+        <div class="Clear">
+        </div>
+    </div>
+    <div class="PostHeader">
+        <table width="700px" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+                <td style="width: 50%">دسته‌بندی
+                </td>
+                <td style="padding-right: 10px">چاپ نوشته
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <div class="style45">
+        <table width="700px" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+                <td style="width: 50%">
+                    <h3 class="style42">
+                        <a href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/" title="چالش‌های الگوریتمی">چالش‌های الگوریتمی</a>
+                    </h3>
+                </td>
+                <td>
+                    <div class="style43">
+                        <a target="_blank" rel="nofollow" href="http://www.algorithmha.ir/category-%DA%86%D8%A7%D9%84%D8%B4-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/post-%D9%85%D8%B9%D9%85%D8%A7%DB%8C-%D9%87%D8%B4%D8%AA-%D9%88%D8%B2%DB%8C%D8%B1/print/" title="نسخه قابل چاپ">
+                            <img src="./معمای هشت وزیر - الگوریتمستان_files/print.gif" alt="نسخه‌ی قابل چاپ" title="نسخه‌ی قابل چاپ" class="NoBorder">
+                            مشاهده‌ی نسخه‌ی قابل چاپ و ارسال به چاپگر</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <div class="PostHeader">
+        ‌برچسب‌ها
+    </div>
+    <div class="style44">
+        <h3 style="font-size:28px"><b><a href="http://www.algorithmha.ir/tag-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85/" target="_self" title"الگوریتم"="">الگوریتم</a></b></h3>، <h3 style="font-size:11px"><b><a href="http://www.algorithmha.ir/tag-%D8%B1%D9%88%D8%B4-%D8%B9%D9%82%D8%A8%DA%AF%D8%B1%D8%AF/" target="_self" title"الگوریتم‌های="" عقبگرد"="">الگوریتم‌های عقبگرد</a></b></h3>، <h3 style="font-size:12px"><b><a href="http://www.algorithmha.ir/tag-%D9%85%D8%B3%D8%A7%D9%84%D9%87-%D9%87%D8%A7%DB%8C-%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%DB%8C/" target="_self" title"مسأله‌های="" الگوریتمی"="">مسأله‌های الگوریتمی</a></b></h3>
+    </div>
+    <div class="PostHeader">
+        ارسال پیام
+    </div>
+    <div class="CommentsPart">
+        
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;مهدی
+                        <br>
+                        <br>
+                        پنجشنبه، ۲۸ اردیبهشت ماه ۱۳۹۱، ساعت ۲۲:۲۹
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        سلام،<br>با تشکر از سایت خوبت <br>می خواستم یه برنامه بنویسم ، جمع ،تفریق، ضرب ، ... اعداد بزرگ با کلاس در<span class="TimesFont"> c++</span><br>لطفا راهنما ییم کنید.<br>
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;رضا
+                        <br>
+                        <br>
+                        جمعه، ۲۹ اردیبهشت ماه ۱۳۹۱، ساعت ۱۲:۳۱
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        خیلی سایت جالب و مفیدی دارید<br>ممنون
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;مجتبی
+                        <br>
+                        <br>
+                        پنجشنبه، ۱۸ خرداد ماه ۱۳۹۱، ساعت ۰۲:۵۶
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        عالیه<br>دستتون دردنکنه<br>انشاءالله که خدا همیشه همراه تان باشد.<br><br><img alt="06" src="./معمای هشت وزیر - الگوریتمستان_files/06.gif">&nbsp;&nbsp;&nbsp;&nbsp; <img alt="08" src="./معمای هشت وزیر - الگوریتمستان_files/08.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;امیر
+                        <br>
+                        <br>
+                        شنبه، ۳۰ دی ماه ۱۳۹۱، ساعت ۲۲:۳۰
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        می خواهیم<span class="TimesFont"> 4 </span>وزیر را در یک صفحه شطرنج به ابعاد<span class="TimesFont"> 7 </span>در<span class="TimesFont"> 7 </span>قرار دهیم به نحوی که هیچ کدام از وزیرها همدیگر را تهدید نکرده <br>و<br> "همچنین"<br> در صورتیکه هر مهره دیگری را در هر یک از خانه های شطرنج قرار دهیم توسط وزیرها مورد تهدید قرار گیرد"<br><br>می خواهیم این مسئله را با الگوریتم ژنتیک شبیه سازی کنیم. مطلوبست:<br>الف- ساختار ژن<br>ب- ساختار کرموزوم<br>ج- تعدادی مثال به عنوان نسل اولیه<br>د-تابع شایستگی<br>ه- عملگر تقاطع(به همراه مثال)<br>و- عملگر جهش(به همراه مثال)<br><br><br><br><img alt="11" src="./معمای هشت وزیر - الگوریتمستان_files/11.gif"><img alt="10" src="./معمای هشت وزیر - الگوریتمستان_files/10.gif"><br>راهنمایی بفرمایید لطفاااااااااااااااااااااا
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;<a rel="nofollow" target="_blank" href="http://www.algorithmha.ir/post-%d9%85%d8%b9%d9%85%d8%a7%db%8">دانا</a>
+                        <br>
+                        <br>
+                        یکشنبه، ۶ اسفند ماه ۱۳۹۱، ساعت ۱۴:۲۶
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        سلام.سایت خوبی دارین ولی من قبلا برای اولین بار این معمارو در<span class="TimesFont"> 1:30</span>ثانیه حلش کردم<br>ولی در کل با حاله<img alt="03" src="./معمای هشت وزیر - الگوریتمستان_files/03.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;علی چوبین
+                        <br>
+                        <br>
+                        جمعه، ۲۲ آذر ماه ۱۳۹۲، ساعت ۲۱:۲۷
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        با تشکر فرآوان از دوستان <br>اون قدیم ها که رشته مهندسی کامپیوتر قبول شدم&nbsp;&nbsp;، درس برنامه نویسی به زبان فرترن ارائه میشد، پروژه درس ما هشت وزیر بود و جالب این که استاد این سئوال را در امتحان پایان ترم آورد و گفت نمره پروژه به کسی داده میشه که این سئوال را سر امتحان هم حل کنه.<br>یادمه که کل ترم کارم این بود که حالت های مختلف هشت وزیر را روی کاغذ میکشیدم تا شاید بتونم رابطه ای بین آنها پیدا کنم.<br>آخر سر هم با کاراکتر در حالت تکست صفحه شطرنج را در زبان فرترن کشیدم.<br>علی چوبین ، فارغ التحصیل رشته مهندسی کامپیوتر سخت افزار از تهران جنوب (ورودی سال<span class="TimesFont"> 1372)</span>
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;مسعود
+                        <br>
+                        <br>
+                        دوشنبه، ۱۶ دی ماه ۱۳۹۲، ساعت ۱۳:۱۴
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        خیلی عالی بود هم سوالش و هم توضیحات شما لطفا از این دست مسئله ها البته با کد الگوریتم قرار بدید
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;سارا
+                        <br>
+                        <br>
+                        چهارشنبه، ۲ بهمن ماه ۱۳۹۲، ساعت ۰۱:۳۳
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        سلام. مرسی از سایت خوبتون من توضیح خط به خط کد برنامه<span class="TimesFont"> n </span>وزیر رو میخواستم با<span class="TimesFont"> ++c</span>
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;س
+                        <br>
+                        <br>
+                        پنجشنبه، ۱۲ تیر ماه ۱۳۹۳، ساعت ۱۰:۱۴
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        با سلام<br>من ی برنامه میخوام با صورت مساله زیر لطفا راهنمایی بفرمایید،<br>یک مربع که پنج حروف انگلیسی<span class="TimesFont"> q</span>،<span class="TimesFont">p</span>،<span class="TimesFont">r</span>،<span class="TimesFont">s</span>،<span class="TimesFont">t </span>با سایز یکسان و رنگ مشکی بدون برخورد با یکدیگر درون مربع قرار بگیرند.<br>با استفاده از برنامه متلب و تابع رندوم
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;sara
+                        <br>
+                        <br>
+                        پنجشنبه، ۱۲ تیر ماه ۱۳۹۳، ساعت ۱۰:۱۵
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        من ی برنامه میخوام با صورت مساله زیر لطفا راهنمایی بفرمایید،<br>یک مربع که پنج حروف انگلیسی<span class="TimesFont"> q</span>،<span class="TimesFont">p</span>،<span class="TimesFont">r</span>،<span class="TimesFont">s</span>،<span class="TimesFont">t </span>با سایز یکسان و رنگ مشکی بدون برخورد با یکدیگر درون مربع قرار بگیرند.<br>با استفاده از برنامه متلب و تابع رندوم 
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;الناز
+                        <br>
+                        <br>
+                        چهارشنبه، ۱۴ آبان ماه ۱۳۹۳، ساعت ۱۵:۱۷
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        سلام ممنون از اطلاعات خوبتون.من برنامه هشت وزیرو با متلب میخوام اگه کسی داره لطفا کمکم کنه مرسی خیلی ضروریه<img alt="07" src="./معمای هشت وزیر - الگوریتمستان_files/07.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;شطرنجباز
+                        <br>
+                        <br>
+                        جمعه، ۱۷ بهمن ماه ۱۳۹۳، ساعت ۱۱:۱۹
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        خیلی راحت بود من تونستم تو یک دقیقه<span class="TimesFont"> 18 </span>روش پیدا کنم.
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;ana
+                        <br>
+                        <br>
+                        پنجشنبه، ۷ خرداد ماه ۱۳۹۴، ساعت ۱۴:۰۶
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        ساده بود.من در کمتر از<span class="TimesFont"> 30 </span>ثانیه<span class="TimesFont"> 19 </span>روش پیدا کردم<img alt="04" src="./معمای هشت وزیر - الگوریتمستان_files/04.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;پریا
+                        <br>
+                        <br>
+                        چهارشنبه، ۴ شهریور ماه ۱۳۹۴، ساعت ۱۳:۰۶
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        سلام با تشکر از سایت عالی که دارید من با را هنما ای که به من کردید این مسئله رو خیلی زود حل کردم<img alt="06" src="./معمای هشت وزیر - الگوریتمستان_files/06.gif"><img alt="06" src="./معمای هشت وزیر - الگوریتمستان_files/06.gif"><img alt="03" src="./معمای هشت وزیر - الگوریتمستان_files/03.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;یحیی
+                        <br>
+                        <br>
+                        جمعه، ۱ آبان ماه ۱۳۹۴، ساعت ۲۳:۰۴
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        می خواهیم<span class="TimesFont"> 8 </span>وزیر را در یک صفحه شطرنج به ابعاد<span class="TimesFont">&nbsp;&nbsp;8</span>در<span class="TimesFont"> 8 </span>قرار دهیم به نحوی که هیچ کدام از وزیرها همدیگر را تهدید نکرده <br>و<br>"همچنین"<br>در صورتیکه هر مهره دیگری را در هر یک از خانه های شطرنج قرار دهیم توسط وزیرها مورد تهدید قرار گیرد"<br><br>می خواهیم این مسئله را با الگوریتم ژنتیک شبیه سازی کنیم. مطلوبست:<br>الف- ساختار ژن<br>ب- ساختار کرموزوم<br>ج- تعدادی مثال به عنوان نسل اولیه<br>د-تابع شایستگی<br>ه- عملگر تقاطع<br>و- عملگر جهش<br><img alt="10" src="./معمای هشت وزیر - الگوریتمستان_files/10.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;یحیی
+                        <br>
+                        <br>
+                        جمعه، ۱ آبان ماه ۱۳۹۴، ساعت ۲۳:۰۶
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        لطفا&nbsp;&nbsp;راهنمایی کنید<br><img alt="03" src="./معمای هشت وزیر - الگوریتمستان_files/03.gif">
+                        
+                    </div>
+                </div>
+                <br>
+            
+                <div class="CommentsBody">
+                    <div class="CommentsTitle">
+                        »&nbsp;sahra200
+                        <br>
+                        <br>
+                        شنبه، ۱۶ آبان ماه ۱۳۹۴، ساعت ۱۹:۵۹
+                    </div>
+                    <div class="CommentsMessage" style="direction:rtl">
+                        سلام<br>دوستان کسی میتونه به این سوال جواب بده<br>هفت حالت تعریف شده.به راه حل های فرموله کردن بازی هشت وزیر را بیابید<br>جوابش شصت و چهار به توان هشت میشود اما چطوری؟<br>سه راه حل دارد حداقل یکی را بیابید<br><span class="TimesFont">1 Start-state</span><br><span class="TimesFont">2 </span>مجموعه اعمالی که عامل قادر است انها را انجام دهد<br><span class="TimesFont">3 </span>فضای حالت<br><span class="TimesFont">4 path </span>یا مسیر<br><span class="TimesFont">5 qoal test</span><br><span class="TimesFont">6 </span>تابع هزینه مسیر<br><span class="TimesFont">7 </span>نتیجه<br>برای تابع هزینه مسیر و<span class="TimesFont"> Qoal test </span>و فضای حالت تعریف درست انجام دهید 
+                        
+                    </div>
+                </div>
+                <br>
+            
+        <br>
+        <hr>
+        <div class="CommentsAttention">
+            دوست عزیزم، لطفا پیش از ارسال پیام به موارد زیر توجه داشته باشید:
+            <br>
+            <br>
+            ۱- تا حد ممکن از حروف فارسی برای نگارش پیام فارسی استفاده کنید. امکان ارسال پیام
+            لاتین و کدهای برنامه‌نویسی با چیدمان چپ به راست نیز وجود دارد.
+            <br>
+            ۲- <b>به درخواست پروژه‌های آماده و موارد مشابه پاسخ داده نخواهد شد.</b>
+            <br>
+            ۳- از قرار دادن هرگونه نشانی یا شماره تماس در متن پیام خودداری کنید.
+            <br>
+            ۴- از ارسال پیام‌های تبلیغاتی خودداری کنید.
+            <br>
+            ۵- از ارسال سوال و پیام غیرمرتبط با این نوشته خودداری کنید.
+            <br>
+            ۶- لطفا نظر خود را در مورد این نوشته با ثبت امتیاز مشخص نمایید.
+            <br>
+            <br>
+            پیشاپیش از همکاری شما سپاسگزارم.
+        </div>
+        <hr>
+        <br>
+        
+        <table cellspacing="10px">
+            <tbody><tr>
+                <td align="left" style="width: 100px">نام:
+                </td>
+                <td align="right">
+                    <input name="ctl00$PostMaster$name" type="text" maxlength="50" size="30" id="PostMaster_name" tabindex="1" class="textBox">
+                    <span id="PostMaster_RequiredFieldValidator1" style="color:Red;visibility:hidden;">الزامی</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">پست الکترونیک
+                </td>
+                <td align="right">
+                    <input name="ctl00$PostMaster$mail" type="text" maxlength="60" size="30" id="PostMaster_mail" tabindex="2" class="textBox">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">وب‌گاه:
+                </td>
+                <td align="right">
+                    <input name="ctl00$PostMaster$website" type="text" maxlength="60" size="30" id="PostMaster_website" tabindex="3" class="textBox">
+                </td>
+            </tr>
+            <tr id="PostMaster_scoreTR">
+	<td align="left">امتیاز:
+                </td>
+	<td align="right">
+                    <table id="PostMaster_downScore">
+		<tbody><tr>
+			<td><input id="PostMaster_downScore_0" type="radio" name="ctl00$PostMaster$downScore" value="5"><label for="PostMaster_downScore_0">
+                            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-5.gif" title="5" class="NoBorder" alt="5">
+                        </label></td><td><input id="PostMaster_downScore_1" type="radio" name="ctl00$PostMaster$downScore" value="4"><label for="PostMaster_downScore_1">
+                            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-4.gif" title="4" class="NoBorder" alt="4">
+                        </label></td><td><input id="PostMaster_downScore_2" type="radio" name="ctl00$PostMaster$downScore" value="3"><label for="PostMaster_downScore_2">
+                            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-3.gif" title="3" class="NoBorder" alt="3">
+                        </label></td><td><input id="PostMaster_downScore_3" type="radio" name="ctl00$PostMaster$downScore" value="2"><label for="PostMaster_downScore_3">
+                            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-2.gif" title="2" class="NoBorder" alt="2">
+                        </label></td><td><input id="PostMaster_downScore_4" type="radio" name="ctl00$PostMaster$downScore" value="1"><label for="PostMaster_downScore_4">
+                            <img src="./معمای هشت وزیر - الگوریتمستان_files/stars-1.gif" title="1" class="NoBorder" alt="1">
+                        </label></td>
+		</tr>
+	</tbody></table>
+                    <span id="PostMaster_RequiredFieldValidator2" style="color:Red;visibility:hidden;">لطفا نظر خود را در مورد این نوشته با ثبت امتیاز مشخص نمایید.</span>
+                </td>
+</tr>
+
+            <tr>
+                <td align="left">متن پیام:
+                </td>
+                <td align="right">
+                    <img alt="right" src="./معمای هشت وزیر - الگوریتمستان_files/align_right.gif" onclick="SetDirection(&#39;rtl&#39;);">
+                    <img alt="01" src="./معمای هشت وزیر - الگوریتمستان_files/a_01.gif" onclick="add(&#39;01&#39;);">
+                    <img alt="02" src="./معمای هشت وزیر - الگوریتمستان_files/a_02.gif" onclick="add(&#39;02&#39;);">
+                    <img alt="03" src="./معمای هشت وزیر - الگوریتمستان_files/a_03.gif" onclick="add(&#39;03&#39;);">
+                    <img alt="04" src="./معمای هشت وزیر - الگوریتمستان_files/a_04.gif" onclick="add(&#39;04&#39;);">
+                    <img alt="05" src="./معمای هشت وزیر - الگوریتمستان_files/a_05.gif" onclick="add(&#39;05&#39;);">
+                    <img alt="06" src="./معمای هشت وزیر - الگوریتمستان_files/a_06.gif" onclick="add(&#39;06&#39;);">
+                    <img alt="07" src="./معمای هشت وزیر - الگوریتمستان_files/a_07.gif" onclick="add(&#39;07&#39;);">
+                    <img alt="08" src="./معمای هشت وزیر - الگوریتمستان_files/a_08.gif" onclick="add(&#39;08&#39;);">
+                    <img alt="09" src="./معمای هشت وزیر - الگوریتمستان_files/a_09.gif" onclick="add(&#39;09&#39;);">
+                    <img alt="10" src="./معمای هشت وزیر - الگوریتمستان_files/a_10.gif" onclick="add(&#39;10&#39;);">
+                    <img alt="11" src="./معمای هشت وزیر - الگوریتمستان_files/a_11.gif" onclick="add(&#39;11&#39;);">
+                    <img alt="12" src="./معمای هشت وزیر - الگوریتمستان_files/a_12.gif" onclick="add(&#39;12&#39;);">
+                    <img alt="13" src="./معمای هشت وزیر - الگوریتمستان_files/a_13.gif" onclick="add(&#39;13&#39;);">
+                    <img alt="14" src="./معمای هشت وزیر - الگوریتمستان_files/a_14.gif" onclick="add(&#39;14&#39;);">
+                    <img alt="left" src="./معمای هشت وزیر - الگوریتمستان_files/align_left.gif" onclick="SetDirection(&#39;ltr&#39;);">
+                    <textarea name="ctl00$PostMaster$message" rows="10" cols="20" id="PostMaster_message" tabindex="4" class="textBox" dir="rtl" style="width:355px;"></textarea>
+                    <span id="PostMaster_RequiredFieldValidator3" style="color:Red;visibility:hidden;">الزامی</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"></td>
+                <td align="right">
+                    <input id="PostMaster_IsPrivate" type="checkbox" name="ctl00$PostMaster$IsPrivate"><label for="PostMaster_IsPrivate">ارسال پیام به صورت خصوصی</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"></td>
+                <td align="right">
+                    <input type="submit" name="ctl00$PostMaster$Send" value="ارسال" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PostMaster$Send&quot;, &quot;&quot;, true, &quot;vg2&quot;, &quot;&quot;, false, false))" id="PostMaster_Send" tabindex="6" class="ctrl">
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <input name="ctl00$PostMaster$direction" type="hidden" id="PostMaster_direction" value="rtl">
+
+                </div>
+            </div>
+            <div class="Clear">
+            </div>
+            <div class="style14">
+                پیوندهای مرتبط
+            </div>
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td>
+                        <div class="style15">
+                            <a href="http://acm.blog.ir/" target="_blank" title="وب‌گاه رسمی مسابقه‌ی ای‌ سی‌ ام سایت تهران">
+                                <img class="blackBorder" width="277px" height="120px" alt="وب‌گاه رسمی مسابقه‌ی ای‌ سی‌ ام سایت تهران" title="وب‌گاه رسمی مسابقه‌ی ای‌ سی‌ ام سایت تهران" src="./معمای هشت وزیر - الگوریتمستان_files/ACMTehran.jpg">
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.sharecode.ir/" target="_blank" title="وب‌گاه داوری آنلاین ایرانی">
+                                <img class="blackBorder" width="277px" height="120px" title="وب‌گاه داوری آنلاین ایرانی" alt="وب‌گاه داوری آنلاین ایرانی" src="./معمای هشت وزیر - الگوریتمستان_files/sharecode.jpg">
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.contest.bayan.ir/" target="_blank" title="وب‌گاه مسابقات برنامه‌نویسی بیان">
+                                <img class="blackBorder" width="277px" height="120px" title="وب‌گاه مسابقات برنامه‌نویسی بیان" alt="وب‌گاه مسابقات برنامه‌نویسی بیان" src="./معمای هشت وزیر - الگوریتمستان_files/bayan.jpg">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.acmwiki.ir/" target="_blank" title="وب‌گاه آموزشی مسابقه‌ی ای‌سی‌ام">
+                                <img class="blackBorder" width="277px" height="120px" title="وب‌گاه آموزشی مسابقه‌ی ای‌سی‌ام" alt="وب‌گاه آموزشی مسابقه‌ی ای‌سی‌ام" src="./معمای هشت وزیر - الگوریتمستان_files/acmwiki.jpg">
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.algorithmist.com/" target="_blank" title="Algorithmist">
+                                <img class="blackBorder" width="277px" height="120px" title="Algorithmist" alt="Algorithmist" src="./معمای هشت وزیر - الگوریتمستان_files/algorithmist.jpg">
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.opedia.ir/" target="_blank" title="المپدیا">
+                                <img class="blackBorder" width="277px" height="120px" title="المپدیا - دانش‌نامه‌ی المپیاد کامپیوتر ایران" alt="المپدیا - دانش‌نامه‌ی المپیاد کامپیوتر ایران" src="./معمای هشت وزیر - الگوریتمستان_files/opedia.jpg">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.topcoder.com/" target="_blank" title="TopCoder">
+                                <img class="blackBorder" width="277px" height="120px" title="TopCoder" alt="TopCoder" src="./معمای هشت وزیر - الگوریتمستان_files/topcoder.jpg">
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="style15">
+                            <a href="https://projecteuler.net/" target="_blank" title="Project Euler">
+                                <img class="blackBorder" width="277px" height="120px" title="Project Euler" alt="Project Euler" src="./معمای هشت وزیر - الگوریتمستان_files/projecteuler.jpg">
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="style15">
+                            <a href="http://www.codeforces.com/" target="_blank" title="Codeforces">
+                                <img class="blackBorder" width="277px" height="120px" title="Codeforces" alt="Codeforces" src="./معمای هشت وزیر - الگوریتمستان_files/codeforces.jpg">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+            <div class="style16">
+                تمامی نوشته‌های وب‌گاه <a href="http://www.algorithmha.ir/" target="_blank" title="الگوریتمستان">الگوریتمستان</a> تحت قرارداد باز <span class="TimesFont"><a href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike v4.0 (CC BY-SA 4.0)" target="_blank">Creative Commons Attribution-ShareAlike v4.0</a></span>
+                هستند.
+            </div>
+            <div class="Clear">
+            </div>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator1"), document.getElementById("PostMaster_RequiredFieldValidator1"), document.getElementById("PostMaster_RequiredFieldValidator2"), document.getElementById("PostMaster_RequiredFieldValidator3"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "search_text";
+RequiredFieldValidator1.validationGroup = "vg3";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+var PostMaster_RequiredFieldValidator1 = document.all ? document.all["PostMaster_RequiredFieldValidator1"] : document.getElementById("PostMaster_RequiredFieldValidator1");
+PostMaster_RequiredFieldValidator1.controltovalidate = "PostMaster_name";
+PostMaster_RequiredFieldValidator1.validationGroup = "vg2";
+PostMaster_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+PostMaster_RequiredFieldValidator1.initialvalue = "";
+var PostMaster_RequiredFieldValidator2 = document.all ? document.all["PostMaster_RequiredFieldValidator2"] : document.getElementById("PostMaster_RequiredFieldValidator2");
+PostMaster_RequiredFieldValidator2.controltovalidate = "PostMaster_downScore";
+PostMaster_RequiredFieldValidator2.validationGroup = "vg2";
+PostMaster_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+PostMaster_RequiredFieldValidator2.initialvalue = "";
+var PostMaster_RequiredFieldValidator3 = document.all ? document.all["PostMaster_RequiredFieldValidator3"] : document.getElementById("PostMaster_RequiredFieldValidator3");
+PostMaster_RequiredFieldValidator3.controltovalidate = "PostMaster_message";
+PostMaster_RequiredFieldValidator3.validationGroup = "vg2";
+PostMaster_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+PostMaster_RequiredFieldValidator3.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+
+</body></html>

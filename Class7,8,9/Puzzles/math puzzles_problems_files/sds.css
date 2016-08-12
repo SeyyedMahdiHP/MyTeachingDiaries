@@ -1,0 +1,39 @@
+
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+
+img {
+  border-width: 0;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+}
+
+p,dd,li {
+  text-align: justify;
+}
+
+.framed {
+    border: 10px solid gray;
+    cellpadding: 5;
+}
+table.footer { width: 100%; }
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.big { font-size: larger; }
+
+/* full width horizontal rulers */
+hr { width: 100%; }
+
+/* a cool trick from <http://www.w3schools.com/css/default.asp>:
+p:first-letter {
+  font-size: 200%;
+  float: left;
+  color: blue;
+  background-color: transparent;
+}
+*/

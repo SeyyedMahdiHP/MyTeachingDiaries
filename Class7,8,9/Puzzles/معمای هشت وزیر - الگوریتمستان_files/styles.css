@@ -1,0 +1,858 @@
+@font-face {
+    font-family: 'BHoma';
+    src: url('fonts/BHoma.eot?#') format('eot'), /* IE6–8 */ url('fonts/BHoma.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/BHoma.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+    font-family: 'BTitr';
+    src: url('fonts/BTitrBold.eot?#') format('eot'), /* IE6–8 */ url('fonts/BTitrBold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/BTitrBold.ttf') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+body {
+    color: #115533;
+    direction: rtl;
+    font-family: BHoma, 'BHoma', 'B Homa', Tahoma;
+    font-size: 11px;
+    background-color: #FFFFFF;
+}
+
+.Blog {
+    margin: 0 auto;
+    width: 980px;
+    text-align: center;
+}
+
+.BlogPost {
+    vertical-align: top;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.BlogMenu {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: top;
+}
+
+.MenuHeader {
+    background-image: url('title.jpg');
+    border: solid 1px #66BB66;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    color: Green;
+}
+
+.MenuBody {
+    font-size: 12px;
+    line-height: 175%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: right;
+    border: solid 1px gray;
+}
+
+.MenuLink {
+    padding-bottom: 7px;
+}
+
+.PostHeader {
+    color: Green;
+    text-align: right;
+    padding-right: 10px;
+    background-image: url('title.jpg');
+    border: solid 1px #66BB66;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+    .PostHeader a {
+        color: Blue;
+    }
+
+        .PostHeader a:visited {
+            color: Blue;
+        }
+
+        .PostHeader a:hover {
+            color: Green;
+        }
+
+.PostText {
+    text-align: justify;
+    direction: rtl;
+    font-size: 15pt;
+    line-height: 200%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.MenuHeader a {
+    color: Blue;
+}
+
+    .MenuHeader a:visited {
+        color: Blue;
+    }
+
+    .MenuHeader a:hover {
+        color: Green;
+    }
+
+.PostBody {
+    border: solid 1px #66BB66;
+    line-height: 250%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: justify;
+}
+
+.CommentsTitle {
+    font-size: 10px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.CommentsMessage {
+    font-size: 9pt;
+    margin-top: 15px;
+    padding: 10px;
+    line-height: 200%;
+    border: dashed 1px Gray;
+}
+
+.CommentsBody {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.CommentsPart {
+    padding: 15px;
+    border: solid 1px #66BB66;
+}
+
+.CommentsReply {
+    direction: rtl;
+    line-height: 175%;
+}
+
+
+
+.CommentsAttention {
+    padding: 10px;
+    color: red;
+    line-height: 200%;
+    text-align: justify;
+    font-size: 12pt;
+}
+
+table {
+    font-size: 11px;
+}
+
+.ctrl {
+    border: #80AFD4 1px outset;
+    font-size: 11px;
+    font-family: Tahoma;
+    background: url(btn.gif);
+    color: #486DA6;
+    height: 20px;
+}
+
+.textBox {
+    font-family: Tahoma;
+    font-size: 11px;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: Blue;
+}
+
+    a:visited {
+        text-decoration: none;
+        color: Blue;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: Red;
+    }
+
+.PostIntro {
+    line-height: 200%;
+    text-align: right;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.PostIntroHeader {
+    font-family: BTitr, 'BTitr', 'B Titr', Tahoma;
+    font-size: 10pt;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.Clear {
+    clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: inline;
+    direction: inherit;
+}
+
+.hright {
+    float: right;
+    width: 120px;
+    height: 150px;
+    padding-top: 10px;
+    line-height: 300%;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.upright {
+    margin-top: 5px;
+    border: solid 1px #66BB66;
+    float: right;
+    width: 120px;
+    padding-top: 15px;
+    height: 112px;
+}
+
+.ACMLink {
+    float: right;
+    width: 420px;
+    margin-right: 2px;
+    height: 125px;
+    margin-top: 5px;
+    border: solid 1px #66BB66;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.ACMLink1 {
+    text-align: center;
+    padding: 6px;
+}
+
+.ACMLink11 {
+    float: right;
+    width: 110px;
+    margin: 5px;
+    line-height: 220%;
+    text-align: justify;
+    font-size: smaller;
+}
+
+.ACMLink12 {
+    float: left;
+    width: 280px;
+    padding: 0px;
+}
+
+.UVALink {
+    float: left;
+    width: 430px;
+    height: 125px;
+    margin-top: 5px;
+    border: solid 1px #66BB66;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.UVALink11 {
+    float: right;
+    width: 150px;
+    margin: 5px;
+    line-height: 220%;
+    text-align: justify;
+    font-size: smaller;
+}
+
+.UVALink12 {
+    float: left;
+    width: 250px;
+    margin-top: 2px;
+}
+
+.style1 {
+    margin-top: 3px;
+    border: solid 1px #66BB66;
+    padding: 5px;
+    height: 20px;
+}
+
+.style2 {
+    float: right;
+    text-align: right;
+    padding-top: 2px;
+}
+
+.style3 {
+    float: left;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.style4 {
+    text-align: right;
+    margin-bottom: 5px;
+    padding-right: 20px;
+    height: 75px;
+    font-size: 12px;
+    line-height: 175%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    text-align: right;
+    border: solid 1px gray;
+}
+
+.style5 {
+    text-align: right;
+    margin-bottom: 5px;
+    padding-right: 20px;
+    height: 150px;
+    font-size: 12px;
+    line-height: 175%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    text-align: right;
+    border: solid 1px gray;
+}
+
+.style6 {
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 300%;
+    border: solid 1px gray;
+}
+
+.style7 {
+    text-align: center;
+    padding: 10px;
+    border: solid 1px gray;
+    height: 75px;
+    padding-top: 25px;
+}
+
+.style8 {
+    float: right;
+    width: 92px;
+}
+
+.style9 {
+    width: 175px;
+    float: left;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.style10 {
+    font-family: BTitr, 'BTitr', 'B Titr', Tahoma;
+    font-size: 13pt;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.font13pt {
+    font-size: 13pt;
+}
+
+.font8pt {
+    font-size: 8pt;
+}
+
+.font9pt {
+    font-size: 9pt;
+}
+
+
+.font14pt {
+    font-size: 14pt;
+}
+
+.style11 {
+    line-height: 200%;
+    text-align: right;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 7pt;
+}
+
+.style12 {
+    margin-top: 5px;
+    background-image: url('title.jpg');
+    border: solid 1px #66BB66;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    color: Green;
+}
+
+.NoBorder {
+    border: 0px;
+}
+
+.style13 {
+    line-height: 250%;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: larger;
+    border: solid 1px gray;
+    margin-bottom: 5px;
+    font-family: BTitr, 'BTitr', 'B Titr', Tahoma;
+    text-align: right;
+    font-weight: bold;
+}
+
+.style14 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url('title.jpg');
+    border: solid 1px #66BB66;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    color: Green;
+}
+
+.style15 {
+    text-align: center;
+    padding: 10px;
+}
+
+.blackBorder {
+    border: solid 1px black;
+}
+
+.style16 {
+    margin-top: 10px;
+    background-image: url('title.jpg');
+    border: solid 1px #66BB66;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    color: Green;
+}
+
+.style17 {
+    text-align: center;
+    padding: 10px;
+    border: solid 1px gray;
+    height: 280px;
+    padding-top: 25px;
+    margin-bottom: 5px;
+}
+
+.style18 {
+    line-height: 200%;
+    border: solid 2px black;
+    text-align: center;
+    width: 580px;
+    padding: 30px;
+    font-family: BTitr, 'B Titr', Tahoma;
+}
+
+.style19 {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Times New Roman';
+}
+
+.style20 {
+    text-align: center;
+    width: 580px;
+    padding: 20px;
+}
+
+.style21 {
+    text-align: justify;
+    font-family: BTitr, 'B Titr', Tahoma;
+}
+
+.style22 {
+    padding: 30px;
+    border: solid 2px red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 200%;
+}
+
+.style23 {
+    font-size: 15pt;
+    line-height: 200%;
+    text-align: justify;
+}
+
+.style24 {
+    font-family: BTitr, 'BTitr', 'B Titr', Tahoma;
+    font-size: 10pt;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+    width: 270px;
+}
+
+.style25 {
+    font-family: BTitr, 'BTitr', 'B Titr', Tahoma;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.style26 {
+    border-bottom: dashed 1px gray;
+    padding-right: 30px;
+    padding-left: 15px;
+    line-height: 200%;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.style27 {
+    float: left;
+    text-align: right;
+    padding-bottom: 5px;
+    width: 250px;
+}
+
+.style28 {
+    width: 270px;
+    line-height: 200%;
+    text-align: right;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.style29 {
+    border: dashed 1px gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.style30 {
+    text-align: right;
+    font-family: BTitr, 'B Titr', Tahoma;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.style31 {
+    height: 90px;
+    border: dashed 1px black;
+    padding: 10px;
+    margin: 10px;
+    background-color: #F5F5F5;
+    font-size: 11pt;
+    font-family: BHoma, 'B Homa', Tahoma;
+}
+
+.style32 {
+    float: right;
+    width: 150px;
+}
+
+.style33 {
+    float: left;
+    width: 530px;
+}
+
+.style34 {
+    border: dashed 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin: 10px;
+    background-color: #F5F5F5;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.style35 {
+    padding: 10px;
+    padding-right: 45px;
+    padding-left: 45px;
+    font-family: BHoma, 'B Homa', Tahoma;
+    font-weight: bold;
+    border: solid 1px #66BB66;
+    line-height: 250%;
+    text-align: justify;
+}
+
+.style36 {
+    padding: 10px;
+    padding-left: 45px;
+    border: solid 1px #66BB66;
+    line-height: 250%;
+    text-align: justify;
+}
+
+.style37 {
+    padding: 10px;
+    line-height: 250%;
+    width: 333px;
+}
+
+.style38 {
+    direction: rtl;
+    text-align: right;
+    font-size: 17px;
+}
+
+.style39 {
+    direction: rtl;
+    text-align: right;
+    font-size: 11px;
+    padding-right: 25px;
+    padding-left: 20px;
+}
+
+.style40 {
+    text-align: left;
+    padding-left: 45px;
+    font-family: BHoma, 'B Homa', Tahoma;
+    border: solid 1px #66BB66;
+    line-height: 250%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+}
+
+.style41 {
+    padding: 20px;
+    text-align: center;
+    border: solid 1px #66BB66;
+    line-height: 250%;
+}
+
+.style42 {
+    font-family: BTitr, 'B Titr', Tahoma;
+    font-size: 25px;
+}
+
+.style43 {
+    text-align: right;
+    font-family: BHoma, 'B Homa', Tahoma;
+}
+
+.style44 {
+    padding: 15px;
+    text-align: right;
+    padding-right: 45px;
+    font-family: BTitr, 'B Titr', Tahoma;
+    border: solid 1px #66BB66;
+    line-height: 350%;
+}
+
+.style45 {
+    padding: 10px;
+    text-align: right;
+    padding-right: 45px;
+    border: solid 1px #66BB66;
+    line-height: 250%;
+}
+
+.style46 {
+    line-height: 200%;
+    text-align: right;
+    padding: 5px;
+    padding-bottom: 20px;
+}
+
+.style47 {
+    border-bottom: dashed 1px gray;
+    padding-right: 30px;
+    padding-left: 15px;
+    line-height: 200%;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.style48 {
+    float: right;
+    margin-top: 5px;
+}
+
+.style49 {
+    float: left;
+    margin-top: 5px;
+}
+
+.TimesFont {
+    font-family: 'Times New Roman';
+}
+
+.style50 {
+    font-family: BTitr, 'B Titr';
+    font-size: 10pt;
+}
+
+.rtljustify {
+    direction: rtl;
+    text-align: justify;
+}
+
+.ltrjustify {
+    direction: ltr;
+    text-align: justify;
+}
+
+.rtlcenter {
+    direction: rtl;
+    text-align: center;
+}
+
+.ltrcenter {
+    direction: ltr;
+    text-align: center;
+}
+
+.PostFooter {
+    font-size: 10pt;
+}
+
+.PostTotalFooter {
+    font-size: 10pt;
+    border-bottom: dashed 1px gray;
+    padding: 3px;
+}
+
+.makeinvisible {
+    display: none;
+    visibility: hidden;
+}
+
+.style510 {
+    text-align: center;
+    padding: 10px;
+    height: 270px;
+    border: solid 1px gray;
+    padding-top: 25px;
+    margin-bottom: 5px;
+}
+
+
+.style520 {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    border: solid 1px gray;
+}
+
+.style51 {
+    font-family: BTitr, 'BTitr', 'B Titr', Tahoma;
+    font-size: 10pt;
+    text-align: right;
+    padding: 7px;
+    font-weight: bold;
+    width: 270px;
+}
+
+.style52 {
+    width: 270px;
+    line-height: 150%;
+    text-align: right;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+.style53 {
+    border: dotted 1px gray;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.style54 {
+    text-align: right;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.style55 {
+    margin-bottom: 5px;
+    padding-right: 20px;
+    font-size: 12px;
+    line-height: 250%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    text-align: right;
+    border: solid 1px gray;
+}
+
+.style56 {
+    margin-bottom: 5px;
+    padding-right: 20px;
+    font-size: 13px;
+    line-height: 250%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    text-align: right;
+    border: solid 1px gray;
+}
+
+.style57 {
+    float: right;
+    margin: 10px;
+    margin-top: 0px;
+    background-color: #FAFAFA;
+    padding-right: 20px;
+    padding-left: 30px;
+    font-size: 9pt;
+    line-height: 250%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+    border: dotted 1px gray;
+}
+
+.style58 {
+    font-size: 10pt;
+    color: lightcoral;
+}
+
+.codeBlock {
+    direction: ltr;
+    text-align: left;
+    font-family: Consolas, 'Courier New', 'Times New Roman';
+    font-size: 11pt;
+    line-height: 175%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: dotted 1px gray;
+    background-color: #F7F7F8;
+}
