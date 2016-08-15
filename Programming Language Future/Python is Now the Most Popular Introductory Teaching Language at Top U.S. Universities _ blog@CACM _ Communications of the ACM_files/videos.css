@@ -1,0 +1,65 @@
+.video {
+    margin: 10px 0px 0px 0px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.video iframe,  
+.video object,  
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section hr{
+    margin: 20px 20px 0px 0px;
+}
+
+.video-title a {
+	color: #003356;
+	font-size: 18px;
+	font: bold 18px/24px Arial, Helvetica, sans-serif;
+}
+
+.video-title a:hover{
+	color: #077fba;
+	font-size: 18px;
+	font: bold 18px/24px Arial, Helvetica, sans-serif;
+}
+
+.other-videos {
+    margin: 25px 25px 0% 2%;
+}
+
+.other-videos a{
+    font-weight: bold;
+}
+
+.single-video { float:left; width:20%; margin:0% 5% 0% 0%; min-height: 160px }
+.single-video h5{ margin:0px !important; }
+.single-video p{ margin:0px 0px 10px 0px !important; }
+
+.calendar { 
+    padding:20px 10px 10px 10px; 
+    background:#d1dce1; 
+    margin:25px 0px 0px 0px; 
+    overflow:hidden; 
+    border-radius: 10px;
+}
+.calendar .calendar-row { margin-bottom:10px; overflow:hidden; }
+.calendar .calendar-element { text-align:center; float:left; width:80px; padding:3px; }
+.calendar .calendar-element h3 { margin:4px 0px 0px 0px !important; }
+.calendar .month-row { 
+    background:#FFF; 
+    text-align:center; 
+    float:left; 
+    width:588px; 
+    padding:3px; 
+    border-radius: 5px;
+}
+
+.calendar .month-row .calendar-element { width:40px; }

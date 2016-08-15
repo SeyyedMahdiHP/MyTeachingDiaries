@@ -1,0 +1,124 @@
+#notifier{
+  display: none;
+  background-color: white;
+  height: 320px;
+  width: 600px;
+  position: absolute;
+  border: 3px solid #C1CCD0;
+  overflow: hidden;
+  z-index: 110;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 1px #cacecf;
+}
+
+.center {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#notifier .body{
+  height: 100%;
+  width: 100%;
+  display: inline;
+}
+
+#notifier .body .right-column{ width: 25%; float: right; overflow: hidden; }
+#notifier .body .right-column img{
+  padding-right: 15px;
+  width: 100px;
+  height: auto;
+}
+
+#notifier .body .left-column{width: 75%; float: left; overflow: hidden;}
+#notifier .body .left-column span{
+  font-weight: bold;
+  margin: 15px 0 0 7px;
+  margin-left: 15px;
+}
+#notifier .body .left-column .inner-left-column { width: 30%; float: left; overflow: hidden; padding-top: 20px;}
+#notifier .body .left-column .inner-right-column { width: 70%; float: right; overflow: hidden; padding-top: 20px;}
+#notifier .body .left-column .inner-left-column img{
+    margin: 5px 0 0 15px;
+  width: 100px;
+  height: auto;
+  padding-right: 5px;
+}
+
+.find-app-link {
+  color: #000;
+  text-decoration: underline;
+  margin-left: 18px;
+}
+
+#notifier .header{
+  width: 100%;
+  height: 25px;
+  background: #c1ccd0;
+  margin-bottom: 20px;
+}
+
+#notifier .header span{
+  position: absolute;
+  margin: 0 0 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+#notifier button{
+  float: right;
+  margin-top: 5px;
+  margin-right: 6px;
+  border: none;
+  background: #f7fbfa;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  box-shadow: -1px -1px 0 0 #b3b8bb;
+  position: relative;
+}
+
+#notifier ul{
+  margin: 0;
+  list-style-type: none;
+}
+
+#notifier ul li{
+  font: normal 14px/21px Georgia, serif;
+  color: #000000;
+  margin: 11px 0px 11px 7px;
+  background-image: url('../images/icons/square_bullet.png');
+  background-repeat: no-repeat;
+  background-position: 1px 9px;
+  padding-left: 12px;
+}
+
+#notifier button:after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+#notifier button:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#notifier button:after, #notifier button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #2b2e33;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -5px;
+}
