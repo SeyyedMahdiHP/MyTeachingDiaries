@@ -1,0 +1,5 @@
+fullscreen = 1
+language = it
+volume_music = 1.0
+volume_sfx = 1.0
+vsync = 1
