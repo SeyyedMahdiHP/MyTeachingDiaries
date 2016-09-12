@@ -1,0 +1,65 @@
+/* 
+    Theme Name: Cubettech Blog
+    Theme URI: http://www.cubettech.com/    
+    Author: Arun George
+    Author URI: http://www.cubettech.com/
+    Version: 2.0
+    Description: The 2010 default theme for WordPress.
+    Tags: black, gray, green, white, dark, light, one-column, two-columns, right-sidebar, fixed-width, flexible-width, custom-header, custom-menu, editor-style, theme-options, threaded-comments
+    Document: style
+    Created on: 16 June, 2016, 2:49:17 PM
+
+*/
+
+/* Pagination */
+.pagination {
+    clear: both;  
+    font-size: 14px;
+    line-height: 13px;
+    position: relative;
+}
+ 
+ .pagination span, .pagination a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #f6f6f6 -moz-use-text-color #f6f6f6 #f6f6f6;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    color: #222;
+    display: inline-block;  
+    padding: 14px 15px;
+    text-decoration: none;
+    transition: background 0.15s ease-in-out 0s;
+    width: auto;
+}
+ 
+ .pagination a:hover {
+    background: #18cdca none repeat scroll 0 0;
+    color: #fff;
+}
+ 
+ .pagination .current {
+    background: #18cdca none repeat scroll 0 0;
+    color: #fff;    
+}
+.pagination a.lasta {
+    border-right: 1px solid #f6f6f6;
+}
+
+.desigs{
+	color:#18cdca;
+	font-size:0.8125em
+}
+
+.listps p{
+    height: 56px !important;
+}
+.contact-pop{
+    margin-top: 0px !important;
+}
+
+

@@ -1,0 +1,266 @@
+
+
+.modal-wrapper{
+    width: 538px;
+    height: 540px;
+    background: url("../img/bg_vector.png")#fff no-repeat center bottom;
+    border: none;
+    padding: 35px;
+    text-align: center;
+   
+}
+.modal-wrapper ~ .reveal-modal-bg{
+    background: rgba(255, 255, 255, 0.4);
+}
+.modal-wrapper h1{
+  font-family: Proximanova-Extrabold;
+  font-size: 25px;
+  text-transform: inherit;
+  line-height: 28px;
+}
+.modal-wrapper h1, .modal-wrapper h3{
+   margin: 0px 0 15px 0;
+}
+.modal-wrapper h3{
+  font-family: proximanova-light;
+  font-size: 24px;
+  line-height: 28px;
+}
+.reveal-modal .close-reveal-modal{
+    display: none;
+}
+.modal-wrapper .form-wrapper .input_style {
+    border-width: 0 0 2px 0;
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: #f0f0f1;
+    font-size: 17px;
+    font-family:Proximanova-Regular;
+        letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    background: none;
+    padding: 10px 0;
+    
+}
+.modal_inner .close{
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   padding: 0;
+   background: none;
+   color: rgba(51, 51, 51, 0.52);
+   font-size: 35px;
+}
+.modal-wrapper .form-wrapper .input_style:focus{
+        border-color: #18cdca;
+    
+}
+
+.modal-wrapper .form-wrapper .btn-submit {
+    width: 116px;
+    height: 41px;
+    background-color: #292c44;
+    font-size: 16px;
+    margin: 12px 0 0 0;
+        border: none;
+    /*padding: 7px 0 0 0;*/
+    color: #fff;
+    position: relative;
+}
+
+.modal-wrapper .form-wrapper .input_style.textareastyle {
+    height: 51px;
+    resize: none;
+    margin: 0;
+}
+.chkbox {
+    text-align: left;
+    margin: 0px;
+    line-height: 0px;
+    color: #a1a1a1;
+        font-size: 13px;
+    font-weight: normal;
+}
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+    position: relative;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "";
+    background: url(../img/img_check.png)#12A4A1;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    top: 0;
+}
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    height: 19px;
+    padding: 0px;
+    margin-right: 6px;
+    text-align: center;
+    padding: 8px 0 0 0;
+}
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+.checkbox_wrapper{
+    text-align: left;
+        margin: 0 0 15px 0;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: #bbb;
+}
+
+.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
+  outline: 1px solid #ddd; /* focus style */
+}
+label.checkbox-custom-label {
+    outline: none !important;
+}
+
+.textarea-wrapper p{
+    margin: 0px;
+}
+span.notification{
+    display: block;
+    margin: 11px 0 0 0;
+}
+.modal-wrapper .form-wrapper .input_style.captcha_style {
+    margin: 27px 0 0 0;
+}
+.modal-wrapper .form-wrapper .btn-submit:focus {
+    outline: none;
+}
+
+.fade { 
+    display: none; /* Hidden as default */ 
+    background: #000; position: fixed; 
+    left: 0; top: 0; width: 100%; height: 100%; 
+    opacity: .5; z-index: 99; }
+
+#ermsg{
+    font-size: 12px;
+    color: red;
+}
+#ermsg p{
+    font-size: 12px;
+    color: red;
+    padding: 0px;
+    line-height: 12px;
+}
+/*#myModal{
+    display: none;
+}*/
+.modal-overlay {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 999;
+   overflow-y: auto;
+}
+#myModal{
+    position: absolute;
+    left: 0px;
+    /*top: 50px;*/
+    right: 0px;
+    margin: 0 auto;
+    z-index: 999;
+	bottom: 110%;
+	opacity: 0;
+    margin-top: 50px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+}
+@media(max-width:767px){
+    .modal-wrapper {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+    .modal-wrapper {
+    width: 568px;
+    border: none;
+    height: 460px;
+    padding:25px;
+}
+.modal-wrapper h1, .modal-wrapper h3 {
+    margin: 0px 0 10px 0;
+}    
+}
+
+@media(max-width:584px){
+    .modal-wrapper {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;    
+
+}
+.modal-wrapper h1 {
+    font-size: 22px;
+    line-height: 26px;
+}
+.modal-wrapper h3 {
+    font-family: proximanova-light;
+    font-size: 20px;
+    line-height: 23px;
+}
+.modal-wrapper h1, .modal-wrapper h3 {
+    margin: 0px 0 12px 0;
+}    
+    
+}
+
+@media(max-width:371px){
+    .modal-wrapper h1, .modal-wrapper h3 {
+    margin: 0px 0 12px 0;
+}
+.modal-wrapper h1 {
+    font-size: 20px;
+    line-height: 22px;
+}
+.modal-wrapper h3 {
+    font-family: proximanova-light;
+    font-size: 16px;
+    line-height: 20px;
+}
+span.notification {
+    display: block;
+    margin: 11px 0 0 0;
+    font-size: 13px;
+}    
+}
+

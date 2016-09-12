@@ -1,0 +1,236 @@
+#sm_select {
+	width: 375px;
+	margin:0 auto;
+	overflow: hidden;
+}
+#sm_select span {
+	float: left;
+	display: block;
+	font-size: 11px;
+	font-weight: 300;
+	line-height: 25px;
+	margin:0 10px;
+	color:#666;
+	width:140px;
+	text-align: right;
+	visibility: hidden;
+}
+#sm_select span.right {
+	text-align: left;
+}
+#sm_select:hover span.visible {
+	visibility: visible;
+}
+#sm_select #selector {
+	width:50px;
+	height:25px;
+	line-height: 25px;
+	position: relative;
+	border:1px solid #999;
+	font-size:11px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+}
+#sm_select a {
+	display: block;
+	float: left;
+	width: 50%;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	color:#aaa;
+	background-color: #ddd;
+}
+#sm_select a.selected {
+	color:#000;
+	background-color: #fff;
+	font-weight: 700;
+	font-size:12px;
+	cursor: default;
+}
+#sm_select a:hover {
+	color:#006AAD;
+}
+#sm_header {
+	width:100%;
+	max-width: 960px;
+	margin:40px auto 10px;
+	text-align: center;
+}
+#sm_header h2 {
+	font-size: 16px;
+	color:#666;
+	font-weight: 300;
+	margin:0;
+	text-align: center;
+	padding: 0;
+	text-transform: uppercase;
+}
+#sm_header h3 {
+	font-size: 15px;
+	color:#666;
+	font-weight: 300;
+	margin:0;
+	text-align: center;
+	padding: 0;
+}
+#sm {
+	width:100%;
+	max-width: 960px;
+	margin:0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#sm h2 {
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+}
+#sm div.small-multiples {
+	clear: both;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+#sm div.chart {
+	margin:10px;
+	float: left;
+}
+#sm div.chart h4 {
+	font-size: 12px;
+	color:#333;
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+	text-align: center;
+}
+#sm div.chart h4 b {
+	color:#000;
+	font-weight: 400;
+}
+#sm svg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+#sm svg .linechart circle {
+	fill:#A06535;
+	stroke:none;
+	fill-opacity:0;
+
+}
+#sm svg .linechart g:hover circle {
+	fill-opacity:1;
+}
+#sm .one svg .linechart g circle {
+	fill-opacity:1;
+}
+#sm svg .linechart g text {
+	fill:#333;
+	text-anchor:middle;
+	font-size:10px;
+	fill-opacity:0;
+}
+#sm svg .linechart g:hover text {
+	fill-opacity:1;
+}
+#sm svg .linechart g line.dropline {
+	fill:none;
+	stroke:#666;
+	stroke-opacity:0.1;
+	/*stroke-dasharray:2,2;*/
+	shape-rendering: crispEdges;
+}
+#sm svg .linechart g:hover line.dropline {
+	stroke-opacity:0.8;
+	stroke-dasharray:2,2;
+}
+
+#sm svg .linechart g rect.bg {
+	fill:#fff;
+	stroke:none;
+	fill-opacity:0;
+}
+#sm svg .linechart g:hover rect.bg {
+	fill-opacity:0.6;
+}
+#sm svg .linechart rect.ix {
+	fill:#000;
+	fill-opacity:0;
+	stroke:none;
+}
+
+#sm svg .linechart path {
+	fill:none;
+	stroke:#A06535;
+	stroke-width:2;
+}
+
+#sm svg .linechart path.area {
+	stroke:none;
+	fill:#A06535;
+	fill-opacity:0.5;
+}
+#sm svg .linechart path.default {
+	stroke:#006AAD;
+	stroke-width:1;
+	stroke-opacity:0.6;
+}
+
+
+#sm svg .threshold line {
+	fill:none;
+	stroke:#a0091d;
+	stroke-width:1;
+	stroke-opacity:0.5;
+	/*stroke-dasharray: 1,1;*/
+}
+
+#sm .chart.first #axes .axis.y,
+#sm .chart:hover #axes .axis.y{
+	display: block;
+}
+#sm #axes .axis.y {
+	display: none;
+}
+
+#sm #axes path,
+#sm #axes line {
+	shape-rendering: crispEdges;
+}
+
+#sm #axes .axis path {
+	stroke:#aaa;
+	stroke-width:1;
+	fill:none;
+}
+#sm #axes .axis .tick line {
+	stroke:#777;
+	stroke-width:1;
+	fill:none;	
+}
+#sm #axes .axis .tick text{
+	font-size: 10px;
+	fill:#000;
+}
+#sm #axes .x .tick text{
+	text-anchor:middle !important;
+}
+#sm #axes line.ygrid {
+	fill:none;
+	stroke:#ccc;
+	stroke-width:1;
+	stroke-dasharray: 2,2;
+}
+#sm .chart.first #axes line.ygrid,
+#sm .chart:hover #axes line.ygrid {
+	display: block;
+}
+#sm #axes line.ygrid {
+	display: none;
+}
+#sm #axes .y .tick line,
+#sm #axes .y path {
+	display: none;
+}

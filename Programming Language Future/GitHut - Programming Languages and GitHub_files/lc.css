@@ -1,0 +1,171 @@
+#qc {
+	width:80%;
+	min-width: 960px;
+	min-height: 70px;
+	margin:15px auto 10px;
+	text-align: center;
+	position: relative;
+}
+#qc svg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	display: block;
+	margin: 0 auto;
+}
+#qc svg .linechart>g {
+	cursor: pointer;
+}
+#qc svg .linechart circle {
+	fill:#A06535;
+	stroke:none;
+	fill-opacity:0;
+}
+#qc svg .linechart .selected circle {
+	fill-opacity:1;
+	fill:#666;
+}
+#qc svg .linechart g:hover circle {
+	fill-opacity:1;
+}
+#qc svg .linechart g:last-child circle {
+	fill-opacity:1;
+}
+#qc svg .linechart g text {
+	fill:#333;
+	text-anchor:middle;
+	font-size:10px;
+	fill-opacity:0;
+}
+#qc svg .linechart g:hover text {
+	fill-opacity:1;
+	font-weight: bold;
+}
+#qc svg .linechart g text tspan.click {
+	font-weight: 300;
+	fill:#666;
+}
+#qc svg .linechart g.selected text tspan.click {
+	fill-opacity:0;
+}
+#qc svg .linechart g line.dropline {
+	fill:none;
+	stroke:#666;
+	stroke-opacity:0.1;
+	stroke-dasharray:2,2;
+	shape-rendering: crispEdges;
+}
+#qc svg .linechart g:hover line.dropline {
+	stroke-opacity:0.8;
+}
+#qc svg .linechart g.selected line.dropline {
+	stroke-opacity:0.8;
+	stroke:#666;
+}
+#qc svg .linechart g rect.bg {
+	fill:#fff;
+	stroke:none;
+	fill-opacity:0;
+}
+#qc svg .linechart g:hover rect.bg {
+	fill-opacity:0.6;
+}
+#qc svg .linechart rect.ix {
+	fill:#000;
+	fill-opacity:0;
+	stroke:none;
+}
+#qc svg .linechart path {
+	fill:none;
+	stroke:#A06535;
+	stroke-width:2;
+}
+
+#qc svg .linechart path.area {
+	stroke:none;
+	fill:#A06535;
+	fill-opacity:0.5;
+}
+
+#qc #axes path,
+#qc #axes line {
+	shape-rendering: crispEdges;
+}
+
+#qc #axes .axis path {
+	stroke:#999;
+	stroke-width:1;
+	fill:none;
+	shape-rendering: crispEdges;
+}
+#qc #axes .axis .tick line {
+	stroke:#aaa;
+	stroke-width:1;
+	fill:none;
+	shape-rendering: crispEdges;
+}
+#qc #axes .axis .tick text{
+	font-size: 10px;
+	fill:#333;
+}
+#qc #axes .x .tick.highlight text,
+#qc #axes .x .tick.selected text{
+	font-weight: bold;
+	fill:#000;
+}
+#qc #axes .x .tick text{
+	text-anchor:middle !important;
+}
+
+#qc #axes line.ygrid {
+	fill:none;
+	stroke:#ccc;
+	stroke-width:1;
+	stroke-dasharray: 2,2;
+}
+#qc .chart.first #qc #axes line.ygrid,
+#qc .chart:hover #qc #axes line.ygrid {
+	display: block;
+}
+#qc #axes .y .tick text {
+	text-anchor:start !important;
+}
+#qc #axes .y .tick line,
+#qc #axes .y path {
+	display: none;
+}
+#qc #timeselect {
+	position: absolute;
+	width: 80px;
+	height:20px;
+	left:14px;
+	bottom:-15px;
+	line-height: 20px;
+}
+#qc #timeselect a.arrow {
+	display: block;
+	width:15px;
+	float: left;
+	text-align: center;
+	font-weight: 400;
+}
+#qc #timeselect ul {
+	margin: 0;
+	padding: 0;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+	float: left;
+	font-size: 12px;
+	font-weight: 400;
+}
+#qc #timeselect ul li {
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+	display: none;
+}
+#qc #timeselect ul li.selected {
+	display: block;
+}
